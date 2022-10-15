@@ -4,10 +4,11 @@ h1.title
     color: rgb(0, 183, 255);
     font-size: 40px;
     font-weight: bold;
-   letter-spacing: 20px; 
-   text-shadow: 8px 8px 8px green;
-   background-color: blueviolet;
-   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    letter-spacing: 20px;
+    margin-bottom: 0ex;
+    text-shadow: 8px 8px 8px green;
+    background-color: blueviolet;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
 }
 body
 {
@@ -22,4 +23,27 @@ ol.roman
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-right: 50%;
 }
-
+table, th, td {
+  border: 8px solid yellow;
+  border-collapse: collapse;
+  border-bottom: 0px;
+}
+th, td {
+  background-color: #96D4D4;
+  font-size: 30px;
+  
+}
+div.index
+{
+    border: 5px;
+    
+}
+footer.foot
+{
+    text-align: right;
+    
+}
+div.content
+{
+    
+}
