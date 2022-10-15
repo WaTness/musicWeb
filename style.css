@@ -1,7 +1,7 @@
 h1.title
 {
     text-align: center;
-    color: rgb(0, 183, 255);
+    color: rgb(9, 255, 0);
     font-size: 40px;
     font-weight: bold;
     letter-spacing: 20px;
@@ -12,21 +12,26 @@ h1.title
 }
 body
 {
-    background-color: yellow;
+    background-color: gray;
 }
 ol.roman
 {
     list-style-type: upper-roman;
-    background-color: aqua;
-    color:darkgoldenrod;
+    background-color: grey;
+    color:greenyellow;
     font-size:x-large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-right: 50%;
 }
 table, th, td {
-  border: 8px solid yellow;
+  
+  border: 8px solid gray;
   border-collapse: collapse;
   border-bottom: 0px;
+}
+table
+{
+    width: 100%;
 }
 th, td {
   background-color: #96D4D4;
