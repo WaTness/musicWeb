@@ -12,7 +12,7 @@ h1.title
 }
 body
 {
-    background-color: gray;
+    background-color:blanchedalmond;
 }
 a
 {
@@ -36,7 +36,7 @@ ol.roman
 }
 table, th, td {
   
-  border: 8px solid gray;
+  border: 8px solid blanchedalmond;
   border-collapse: collapse;
   border-bottom: 0px;
 }
@@ -45,9 +45,13 @@ table
     width: 100%;
 }
 th, td {
-  background-color: #96D4D4;
+  background-color:darksalmon;
   font-size: 30px;
   
+}
+th:hover
+{
+    background-color:black
 }
 div.index
 {
@@ -62,5 +66,6 @@ footer.foot
 }
 div.content
 {
-    
+    margin-left: 20px;
+    margin-right: 20px ;
 }

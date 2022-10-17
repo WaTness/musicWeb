@@ -15,7 +15,9 @@
     <div class = "index">
         <table>
             <thead>
-                <tr><th><a href="index.html">Home</a></th><th>人物</th>
+                <tr>
+                    <th><a href="index.html">Home</a></th>
+                    <th>人物</th>
                     <th><a href="contact.html">contact</a></th>
                     <th><a href="about.html">about</a></th>
                 </tr>
@@ -24,7 +26,12 @@
     </div>
     <hr>
     <div class = "content">
-        <h1></h1>
+        <h1>人物介紹</h1>
+        <div>
+            <img src="./Images/Mozart.jpg" />
+            <h2>沃爾夫岡·阿馬德烏斯·莫札特 （德語：Wolfgang Amadeus Mozart，1756年1月27日－1791年12月5日）</h2>
+            <p>古典時期的作曲家及鋼琴家。莫札特短短的一生就創作了800多部作品，當時絕大部份的音樂形式都能在他的作品中找到[2]，他在短暫的生命裡將古典時期的音樂風格臻於成熟並發揚光大，其作品也被廣泛視為古典音樂的典型，對後世有極大的影響。</p>
+        </div>
     </div>
 </body>
 <footer class ="foot">
@@ -32,6 +39,16 @@
         <p>&copy;銘傳大學 音樂分組報告</p>
         <script>
             document.write("<h5 style=\"color:brown\"><i>網頁最後修改日期" + document.lastModified + "</i></h5>");
-        </script>  
+        </script>
+        <body onload="clock()">
+        <img id="sec5" src="#" width="100" height="100" />
+        <img id="sec6" src="#" width="100" height="100" />時
+        
+        <img id="sec3" src="#" width="100" height="100" />
+        <img id="sec4" src="#" width="100" height="100" />分
+        
+        <img id="sec1" src="#" width="100" height="100" />
+        <img id="sec2" src="#" width="100" height="100" />秒
+        </body>
 </footer>
 </html>
