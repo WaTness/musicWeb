@@ -8,8 +8,9 @@
     <style >
         @import url(style.css);
     </style>
+    <script src="fuc.js"></script>
 </head>
-<body>
+<body onload="clock()">
     <h1 class="title">銘傳音樂人</h1>
     <div class = "index">
         <table>
@@ -28,6 +29,9 @@
 </body>
 <footer class ="foot">
     <hr>
-        &copy;銘傳大學 音樂分組報告   
+        <p>&copy;銘傳大學 音樂分組報告</p>
+        <script>
+            document.write("<h5 style=\"color:brown\"><i>網頁最後修改日期" + document.lastModified + "</i></h5>");
+        </script>  
 </footer>
 </html>

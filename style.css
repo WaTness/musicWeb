@@ -14,6 +14,17 @@ body
 {
     background-color: gray;
 }
+a
+{
+    text-decoration:none;
+    color:brown;
+}
+a:hover
+{
+    text-decoration:underline cornsilk;
+    color:coral;
+}
+
 ol.roman
 {
     list-style-type: upper-roman;
@@ -46,6 +57,7 @@ div.index
 footer.foot
 {
     text-align: right;
+    font-weight: bold;
     
 }
 div.content
