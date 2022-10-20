@@ -8,14 +8,16 @@
     <style >
         @import url(style.css);
     </style>
+    <script src="fuc.js"></script>
 </head>
-<body>
+<body onload="clock()">
     <h1 class="title">銘傳音樂人</h1>
     <div class = "index">
         <table>
             <thead>
-                <tr><th><a href="index.html">Home</a></th><th>人物</th>
-                    <th><a href="contact.html">contact</a></th>
+                <tr><th><a href="index.html">Home</a></th>
+                    <th>人物</th>
+                    <th style = "background-color:rgb(167, 162, 239);color:gold;" >contact</th>
                     <th><a href="about.html">about</a></th>
                 </tr>
 
@@ -30,6 +32,9 @@
                 有問題請聯絡<a href = "mailto: liu060810@gmail.com" style="color:yellow">liu060810@gmail.com</a>
             </li>
             <li>08390085陳慶銓</li>
+            <li>08390902楊承展</li>
+            <li>吳承哲</li>
+            <li>張騰恩</li>
         </ol>
     </div>
 </body>
@@ -38,6 +43,14 @@
         &copy;銘傳大學 音樂分組報告 
         <script>
             document.write("<h5 style=\"color:brown\"><i>網頁最後修改日期" + document.lastModified + "</i></h5>");
-        </script>  
+        </script>
+            <div style="font-size: 50px;" >
+                <img id="sec5" src="#" width="50" height="50" />
+                <img id="sec6" src="#" width="50" height="50" />時
+                <img id="sec3" src="#" width="50" height="50" />
+                <img id="sec4" src="#" width="50" height="50" />分
+                <img id="sec1" src="#" width="50" height="50" />
+                <img id="sec2" src="#" width="50" height="50" />秒
+        </div> 
 </footer>
 </html>
