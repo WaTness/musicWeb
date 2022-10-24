@@ -31,6 +31,7 @@ a
     color:brown;
     transition: all;
     transition-duration: 1.5s;
+    
 }
 a:hover
 {
@@ -101,14 +102,29 @@ img.musician
     url("https://mdn.github.io/css-examples/tools/border-image-generator/border-image-6.svg");
     border-style:solid;
     margin-left: 80px;
-    
+    width: 250px;
+    height: 300px;
+    margin-top: 30px;
 }
 ul.about
 {
-
-
+    list-style-image: url("./Images/about_list.png") ;
+    
 }
-br
+
+div.musician
 {
-    display: inline ;
+    width: 400px;
+    height: 500px;
+    display:flex inline;
+    border-image-source: url("./Images/frame-7204772_960_720.png");
+    border-image-slice:60;
+    border-image-width:50px;
+    border-image-outset:50px;
+    border-image-repeat:round round;
+    border-style:solid;
+    margin-left: 80px;
+    margin-top: 60px;
+    background-color:peru;
+    margin-bottom: 100px;
 }
