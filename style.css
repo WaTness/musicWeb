@@ -7,18 +7,22 @@ h1.title
     letter-spacing: 20px;
     margin-bottom: 0ex;
     text-shadow: 8px 8px 8px green;
-    background-color: rgb(142, 68, 181);
+    background:linear-gradient(to left,rgb(121, 113, 125),rgb(230, 112, 234) ) ;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
     margin-left: 30px ;
-    
+    border-image-source: url("./Images/border1.jpg");
+    border-image-slice:42 42 42 42;
+    border-image-width:42px 42px 42px 42px;
+    border-image-repeat:round round;
+    border-image-source:
+    url("./Images/border1.jpg");
+    border-style: solid;
     width:96%;
-    
-    
 }
 body
 {
     background-color:rgb(167, 162, 239);
-    border-image-slice:50% 15% 32% 16%;
+    border-image-slice:50% 33% 15% 33%;
     border-image-width:1.5em 1.5em 1.5em 1.5em;
     border-image-outset:0px 0px 0px 0px;
     border-image-repeat:round round;
@@ -28,7 +32,7 @@ body
 a
 {
     text-decoration:none;
-    color:rgb(188, 53, 53);
+    color:rgb(177, 34, 34);
     transition: all;
     transition-duration: 1.5s;
     
@@ -36,9 +40,15 @@ a
 a:hover
 {
     text-decoration:underline rgb(236, 191, 10);
-    color:rgb(201, 17, 207);
+    animation: ahover 5s infinite;
+    -webkit-animation: ahover 5s infinite;
 }
-
+@keyframes ahover
+{
+    0%{color:rgb(188, 53, 53); }
+    50%{color:rgb(255, 6, 205);}
+    100%{  color:rgb(188, 53, 53);}
+}
 ol.roman
 {
     list-style-type: upper-roman;
@@ -98,6 +108,13 @@ div.content
     margin-right: 30px ;
     font-size: 20px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-image-slice:70;
+    border-image-width:50px;
+    border-image-outset:0px;
+    padding: 60px;  
+    border-image-source:
+    url("./Images/frame1.jpg");
+    border-style: solid;
 }
 img.musician
 {
@@ -127,8 +144,8 @@ hr.main
 @keyframes musician
 {
     0%{transform: rotate(0deg);}
-    25%{transform:rotate(15deg);}
-    75%{transform: rotate(-15deg);}
+    25%{transform:rotate(5deg);}
+    75%{transform: rotate(-5deg);}
     100%{transform: rotate(0deg);}
 }
 div.musician
@@ -158,4 +175,10 @@ div.musician:hover
     display: flex;
     justify-content:right;
     align-items: right;
+}
+h2
+{
+
+    
+   
 }
