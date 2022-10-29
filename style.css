@@ -111,6 +111,7 @@ div.content
     border-image-slice:70;
     border-image-width:50px;
     border-image-outset:0px;
+    border-image-repeat: round round;
     padding: 60px;  
     border-image-source:
     url("./Images/frame1.jpg");
