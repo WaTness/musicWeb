@@ -9,6 +9,7 @@
         @import url(style.css);
     </style>
     <script src="fuc.js"></script>
+    <script src="Hello.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <body onload="clock()">
@@ -19,6 +20,8 @@
                 <tr>
                     <th class ="Ntouch"><a href="index.html" style="display:block;">Home</a></th>
                     <th style = "background-color:rgb(167, 162, 239);color:gold;">人物</th>
+                    <th class ="Ntouch"><a href="musician.html" style="display:block;">小遊戲</th>
+                    <th class ="Ntouch"><a href="musician.html" style="display:block;">工作日程表</th>
                     <th class ="Ntouch"><a href="contact.html" style="display:block;">contact</a></th>
                     <th class ="Ntouch"><a href="about.html" style="display:block;">about</a></th>
                 </tr>
@@ -30,11 +33,11 @@
         <hr>
         <h1>人物介紹</h1>
         <div style="display: flex; justify-content: space-around;flex-flow: row wrap;">
-            <div class="musician">
+            <a href="Mozart.html" style="text-decoration:none;color:black" onclick="Mozart()"><div class="musician">
                 <img src="./Images/Mozart.jpg" class="musician"/>
                 <h4>沃爾夫岡·阿馬德烏斯·莫札特</h4> 
                 <p>（德語：Wolfgang Amadeus Mozart，1756年1月27日－1791年12月5日）</p>
-            </div>
+            </div></a>
             <div class="musician">
                 <img src="./Images/Beethoven.jpg" class="musician"/>
                 <h4>路德維希·范·貝多芬 </h4>

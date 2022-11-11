@@ -60,9 +60,9 @@ ol.roman
 }
 table, th, td {
   
-    border: 8px solid blanchedalmond;
+    border: 8px solid rgb(21, 25, 129);
     border-collapse: collapse;
-    border-bottom: 0px;
+    
     background-color:darksalmon;
     font-size: 30px;
     transition-property:all;
@@ -142,12 +142,19 @@ hr.main
     background:linear-gradient(to right,rgb(20, 157, 226),rgb(169, 211, 19), red);
     
 }
-@keyframes musician
+@keyframes musicianMove
 {
     0%{transform: rotate(0deg);}
     25%{transform:rotate(5deg);}
     75%{transform: rotate(-5deg);}
     100%{transform: rotate(0deg);}
+    0% {
+        filter: hue-rotate(0deg);
+        
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
 }
 div.musician
 {
@@ -168,8 +175,10 @@ div.musician
 }
 div.musician:hover
 {
-    animation: musician 5s infinite;
-    -webkit-animation: musician 5s infinite;
+    animation: musicianMove 5s infinite;
+    -webkit-animation: musicianMove 5s infinite;
+    -webkit-fill-color: transparent;
+    
 }
 .audio-container
 {
