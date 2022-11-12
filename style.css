@@ -58,7 +58,7 @@ ol.roman
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-right: 50%;
 }
-table, th, td {
+table, th {
   
     border: 6px solid rgb(3, 9, 90);
     border-collapse: collapse; 
@@ -67,6 +67,16 @@ table, th, td {
     transition-property:all;
     transition-duration: 1s;
     
+}
+tr,td{
+  border: 6px groove;
+  border-collapse: collapse;
+}
+tr:nth-child(even) {
+  background-image:linear-gradient(to left, #F4D35E, #FAF0CA);
+}
+tr:nth-child(odd) {
+  background-image:linear-gradient(to left, #F95738, #EE964B); 
 }
 table
 {
@@ -277,7 +287,7 @@ th:hover.Ntouch
 }
 @keyframes mymove{
 0%{ border: 7px solid rgb(12, 210, 154);}
-50%{border: 7px solid rgb(174, 9, 103);}
+50%{border: 7px solid #AFA98D;}
 100%{ border: 7px solid rgb(12, 210, 154);}
 }
 div.index
