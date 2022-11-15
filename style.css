@@ -392,4 +392,32 @@ h2
     
    
 }
+#MozartYoung{
+  background-image: url("./Images/Wolfgang-amadeus-mozart_2.jpg");
+  text-align:  center;
+  color: #b9ef08;
+  font-size: 30px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float: right;
+  width: 330px;
+  height: 413px;
+  
+}
+#MozartYoung:hover{
+  font-weight: 400;
+  color:#c97676;
+  animation: MozartYoungColor 2s infinite;
+  -webkit-animation: MozartYoungColor 2s infinite;
+}
+ 
 
+@keyframes MozartYoungColor{
+0%{ color: #b9ef08;font-weight: 400;}
+16%{ color: #36ef08;font-weight: 700;}
+32%{ color: #5def08;font-weight: 400;}
+50%{color: #08ef55;font-weight: 700;}
+66%{ color: #5def08;font-weight: 400;}
+82%{ color: #36ef08;font-weight: 700;}
+100%{ color: #b9ef08;font-weight: 400;}
+}
