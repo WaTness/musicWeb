@@ -11,6 +11,22 @@
     <script src="fuc.js"></script>
     <script src="Hello.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#MozartYoung').hover(function(){
+                $('#MozartYoungDes').fadeIn();
+                $('#MozartYoungDes1').fadeIn();
+            })
+            $('#MozartYoung').mouseleave(function(){
+                $('#MozartYoungDes').fadeOut();
+                $('#MozartYoungDes1').fadeOut();
+            })
+            $('#show1').click(function(){
+                $('#S').fadeOut();
+                $('#show1').text("顯示");
+            })
+        })
+    </script>
 </head>
 <body onload="clock()">
     <h1 class="title" id ="title">莫札特</h1>
@@ -32,6 +48,7 @@
                 <li>
                     <a href="#click" class="menu">
                     <h2 class="menu-title">生平</h2>
+                    
                     <ul class="menu-dropdown">
                         <li>背景與童年</li>
                         <li>早年遊歷</li>
@@ -77,10 +94,14 @@
     <hr>
     <div class = "content">
         <h1 id="life">生平</h1>
+        <button id="show1">隱藏</button>
         <hr class="main">
         <h3>背景與童年（1756年－1763年）</h3>
-        <div id="MozartYoung"><p style="text-align: center;"><br><br><br><br><br>幼年莫札特</p></div>
-        <p>
+        <div id="MozartYoung">
+            <p id="MozartYoungDes1" style="text-align: center; display: none;"><br><br><br><br><br>幼年莫札特</p>
+            <p id="MozartYoungDes" style="display: none;">1763年匿名的油畫作品，可能由彼得羅·安東尼奧·洛倫佐尼所繪</p>
+        </div>
+        <p id="S">
             莫札特出生於1756年巴伐利亞王國薩爾斯堡糧食胡同9號，在當時這是薩爾斯堡總教區的首府，屬於神聖羅馬帝國。
             父親是作曲家李奧波德·莫札特（1719年—1787年），母親為安娜·瑪麗亞·波特爾（1720年—1778年）。身為家中第七個小孩，
             在他姊姊瑪利亞·安娜（Maria Anna，暱稱南妮兒（Nannerl））1751年出生之前，以及之後至他出生之間的這段時間，
