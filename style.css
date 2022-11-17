@@ -19,6 +19,7 @@ h1.title
     border-style: solid;
     width:96%;
 }
+
 body
 {
     background-color:rgb(167, 162, 239);
@@ -29,6 +30,7 @@ body
     border-image-source:url("https://mdn.github.io/css-examples/tools/border-image-generator/border-image-2.png");
     border-style:solid;
 }
+
 a
 {
     text-decoration:none;
@@ -37,18 +39,21 @@ a
     transition-duration: 1.5s;
     
 }
+
 a:hover
 {
     text-decoration:underline rgb(236, 191, 10);
     animation: ahover 5s infinite;
     -webkit-animation: ahover 5s infinite;
 }
+
 @keyframes ahover
 {
     0%{color:rgb(188, 53, 53); }
     50%{color:rgb(255, 6, 205);}
     100%{  color:rgb(188, 53, 53);}
 }
+
 ol.roman
 {
     list-style-type: upper-roman;
@@ -58,6 +63,7 @@ ol.roman
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-right: 50%;
 }
+
 table, th {
   
     border: 6px solid rgb(3, 9, 90);
@@ -68,16 +74,20 @@ table, th {
     transition-duration: 1s;
     
 }
+
 tr,td{
   border: 6px groove;
   border-collapse: collapse;
 }
+
 tr:nth-child(even) {
   background-image:linear-gradient(to left, #F4D35E, #FAF0CA);
 }
+
 tr:nth-child(odd) {
   background-image:linear-gradient(to left, #F95738, #EE964B); 
 }
+
 table
 {
     width: 96%;
@@ -85,7 +95,6 @@ table
     background-image:linear-gradient(to left, #5e09f1, #d53a9d);  
     border: 5px;
 }
-
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 
@@ -95,6 +104,7 @@ table
   cursor: pointer;
   margin-top:5px;
 }
+
 div.menu{
     display: flex;
     
@@ -304,6 +314,7 @@ footer.foot
 }
 div.content
 {
+    display: none;
     margin-left: 30px;
     margin-right: 30px ;
     font-size: 20px;
@@ -380,18 +391,19 @@ div.musician:hover
     -webkit-fill-color: transparent;
     
 }
+
 .audio-container
 {
     display: flex;
     justify-content:right;
     align-items: right;
 }
+
 h2
 {
-
-    
    
 }
+
 #MozartYoung{
   background-image: url("./Images/Wolfgang-amadeus-mozart_2.jpg");
   text-align:  center;
@@ -404,6 +416,7 @@ h2
   height: 413px;
   
 }
+
 #MozartYoung:hover{
   font-weight: 400;
   color:#c97676;
@@ -411,7 +424,6 @@ h2
   -webkit-animation: MozartYoungColor 2s infinite;
 }
  
-
 @keyframes MozartYoungColor{
 0%{ color: #b9ef08;font-weight: 400;}
 16%{ color: #36ef08;font-weight: 700;}
@@ -420,4 +432,8 @@ h2
 66%{ color: #5def08;font-weight: 400;}
 82%{ color: #36ef08;font-weight: 700;}
 100%{ color: #b9ef08;font-weight: 400;}
+}
+
+.bunttonShowHide{
+  margin-top: 30px;
 }

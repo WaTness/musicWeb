@@ -9,6 +9,12 @@
         @import url(style.css);
     </style>
     <script src="fuc.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#B").fadeIn("slow");
+        })
+    </script>
 </head>
 <body onload="clock()">
     <h1 class="title" id ="title">銘傳音樂人</h1>
@@ -26,7 +32,7 @@
         </table>
     </div>
     <hr>
-    <div class = "content">
+    <div class = "content" id="B" >
         <h1>銘傳音樂小組報告</h1>
         <ol class = "roman">
             <li>08390856劉晏丞

@@ -10,6 +10,11 @@
     </style>
     <script src="fuc.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#B").fadeIn("slow");
+        })
+    </script>
 </head>
 <body onload="clock()">
     <h1 class="title">銘傳音樂人</h1>
@@ -26,7 +31,7 @@
         </table>
     </div>
     <hr>
-    <div class = "content">
+    <div class = "content" id="B" >
 
         <h1>日程表</h1>
         <hr class="main">
@@ -152,6 +157,12 @@
                     <td>11/14</td>
                     <td>30min</td>
                     <td>幼年莫札特特效排版</td>
+                    <td>劉晏丞</td>
+                </tr>
+                <tr>
+                    <td>11/16</td>
+                    <td>30min</td>
+                    <td>jquery新增動畫</td>
                     <td>劉晏丞</td>
                 </tr>
             </tbody>
