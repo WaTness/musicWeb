@@ -10,6 +10,7 @@
     </style>
     <script src="fuc.js"></script>
     <script src="Hello.js"></script>
+    <script src="mousedown.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -27,11 +28,15 @@
                 $('#MozartYoungDes').fadeOut();
                 $('#MozartYoungDes1').fadeOut();
             })
-            $('#show1').click(function(){
-                $('#lifeContent').slideUp();
-            })
             $('#hide1').click(function(){
+                $('#lifeContent').slideUp();
+                $('#show1').css('background-color','#0e9c3d')
+                $('#hide1').css('background-color',' #08ef55')
+            })
+            $('#show1').click(function(){
                     $('#lifeContent').slideDown();
+                    $('#hide1').css('background-color','#0e9c3d')
+                    $('#show1').css('background-color','#08ef55')
                 })
         })
     </script>
@@ -103,8 +108,8 @@
     <div class = "content" id="B">
         <section style="display:flex;">
             <h1 id="life">生平&nbsp;&nbsp;</h1>
-            <button id="show1" class="bunttonShowHide" style="height: 30px;">隱藏</button>
-            <button id="hide1" class="bunttonShowHide" style="height: 30px;">顯示</button>
+            <button id="hide1" class="buttonShowHide" style="height: 30px;">隱藏</button>
+            <button id="show1" class="buttonShowHide" style="height: 30px;">顯示</button>
         </section>
        
         <hr class="main">
