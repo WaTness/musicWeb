@@ -462,3 +462,14 @@ h2
   font-weight: bold ;
   
 }
+
+.game{
+  background-color: #08ef55;
+  width: 30%;
+  text-align: center;
+  color:#5e09f1;
+  font-weight: bold;
+}
+.game:hover{
+  background-color: #b96666;
+}
