@@ -425,13 +425,13 @@ h2
 }
  
 @keyframes MozartYoungColor{
-0%{ color: #b9ef08;font-weight: 400;}
-16%{ color: #36ef08;font-weight: 700;}
-32%{ color: #5def08;font-weight: 400;}
-50%{color: #08ef55;font-weight: 700;}
-66%{ color: #5def08;font-weight: 400;}
-82%{ color: #36ef08;font-weight: 700;}
-100%{ color: #b9ef08;font-weight: 400;}
+0%{ color: #b9ef08;}
+16%{ color: #36ef08;}
+32%{ color: #5def08;}
+50%{color: #08ef55;}
+66%{ color: #5def08;}
+82%{ color: #36ef08;}
+100%{ color: #b9ef08;}
 }
 
 .buttonShowHide{
@@ -442,9 +442,23 @@ h2
   border:groove ;
   font-size: 16px;
 }
+
 .buttonShowHide button:hover{
   background-color: black;
 }
-#show1{
+
+#hide1{
   background-color: #0e9c3d;
+}
+
+.second{
+  border-color: rgb(8, 122, 10); 
+  height:2px ;
+  background:linear-gradient(to right,rgb(169, 229, 18),rgb(10, 20, 206),rgb(184, 99, 167)); 
+}
+
+.point{
+  color: rgb(20, 61, 224) ; 
+  font-weight: bold ;
+  
 }
