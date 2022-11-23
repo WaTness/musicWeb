@@ -10,6 +10,7 @@
     </style>
     <script src="fuc.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="game.js"></script>
     <script>
         $(document).ready(function(){
             $("#B").fadeIn("slow");
@@ -34,12 +35,14 @@
     <hr>
     <div class = "content" id="B" >
         <ol style="display:block;">
-            <a href=""><div class="game"><li>翻牌遊戲</li></div></a>
-            <a href=""><div class="game"><li>翻牌遊戲</li></div></a>
-            <a href=""><div class="game"><li>翻牌遊戲</li></div></a>
-            <a href=""><div class="game"><li>翻牌遊戲</li></div></a>
-            <a href=""><div class="game"><li>翻牌遊戲</li></div></a>
+            <div class="game"  onclick="clickGame(1)"><li id="game1">翻牌遊戲</li></div>
+            <div class="game"  onclick="clickGame(2)"><li id="game2">翻牌遊戲2</li></div>
+            <div class="game"  onclick="clickGame(3)"><li id="game3">翻牌遊戲3</li></div>
+            <div class="game"  onclick="clickGame(4)"><li id="game4">翻牌遊戲4</li></div>
+            <div class="game"  onclick="clickGame(5)"><li id="game5">翻牌遊戲5</li></div>
         </ol>
+        <div id="gameName"></div>
+        <canvas style="border: 5px solid;width: 100%;"></canvas>
     </div>
 </body>
 <footer class ="foot">
