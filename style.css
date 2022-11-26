@@ -443,11 +443,13 @@ h2
   font-size: 16px;
 }
 
-.buttonShowHide button:hover{
-  background-color: black;
+.buttonShowHide:hover{
+  
+  color:white;
+  cursor: pointer;
 }
 
-#hide1{
+#hide1,#hide2,#hide3,#hide4{
   background-color: #0e9c3d;
 }
 
@@ -479,5 +481,25 @@ h2
   text-align: center;
   font-size: 30px;
   display: block;
+  font-weight: 600;
+}
+#gameContent{
+  border: 5px solid;
+  width: 100%;
+  height: 600px;
+}
+#BTNgame{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.BTNgame1{
+  text-align: center;
+  color: #0bf759;
+  background-color: #432a05;
+  cursor: pointer;
+  margin: 5px;
+  display: none;
+  font-size: 50px;
   font-weight: 600;
 }
