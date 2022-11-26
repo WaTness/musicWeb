@@ -6,7 +6,7 @@ function clickGame(i){
          document.getElementById("BTNgame" + j).style="display:none";
     }
     document.getElementById("BTNgame" + i).style="display:flex";
-    document.getElementById("BTNgame" + i).innerHTML="開始 " + x + " 遊戲";
+    document.getElementById("BTNgame" + i).innerHTML="開始 " + x;
 }
 function StartGame1(i){
 

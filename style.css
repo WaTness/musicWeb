@@ -62,6 +62,7 @@ ol.roman
     font-size:x-large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-right: 50%;
+    border-radius: 30px;
 }
 
 table, th {
@@ -399,11 +400,6 @@ div.musician:hover
     align-items: right;
 }
 
-h2
-{
-   
-}
-
 #MozartYoung{
   background-image: url("./Images/Wolfgang-amadeus-mozart_2.jpg");
   text-align:  center;
@@ -414,7 +410,7 @@ h2
   float: right;
   width: 330px;
   height: 413px;
-  
+  border-radius: 30px;
 }
 
 #MozartYoung:hover{
@@ -441,6 +437,7 @@ h2
   background-color: #08ef55;
   border:groove ;
   font-size: 16px;
+  border-radius: 10px;
 }
 
 .buttonShowHide:hover{
@@ -451,7 +448,9 @@ h2
 
 #hide1,#hide2,#hide3,#hide4{
   background-color: #0e9c3d;
+  border-radius: 10px;
 }
+
 
 .second{
   border-color: rgb(8, 122, 10); 
@@ -472,6 +471,8 @@ h2
   color:#5e09f1;
   font-weight: bold;
   cursor: pointer;
+  border-radius: 10px;
+  margin: 5px;
 }
 .game:hover{
   background-color: #b96666;
@@ -487,6 +488,8 @@ h2
   border: 5px solid;
   width: 100%;
   height: 600px;
+  border-radius:  50px;
+  border-color: rgb(238, 80, 75);
 }
 #BTNgame{
   display:flex;
@@ -503,3 +506,64 @@ h2
   font-size: 50px;
   font-weight: 600;
 }
+#game1_play .grid {
+  max-width: 900px;
+  margin: 80px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  height: 500px; }
+
+#game1_play .card {
+  position: relative;
+  -webkit-transition: all .4s linear;
+  -o-transition: all .4s linear;
+  transition: all .4s linear;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+#game1_play .match {
+  background-image: none !important; }
+
+#game1_play .card,
+#game1_play .back,
+#game1_play .front {
+  margin: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 190px;
+  width: 120px;
+  border-radius: 10px; 
+  border-color: black;
+  border-style: groove;
+}
+
+#game1_play .back,
+#game1_play .front {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+#game1_play .front {
+  background-image: linear-gradient(to bottom,#FFDBB5,#C04ABC);
+  background-size: contain; 
+}
+  
+
+#game1_play .back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  background-color: rgb(179, 18, 160); }
+
+#game1_play .selected {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
+
+#game1_play .match .front {
+  background: none !important; }
