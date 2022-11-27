@@ -1,3 +1,6 @@
+function CardGame(){
+
+
 const cardsArray = [
   {
     name: "Mozart",
@@ -20,6 +23,7 @@ const cardsArray = [
     img:"./Images/Wolfgang-amadeus-mozart_2.jpg"
   },
 ]
+var score = 0;
 var gameGrid = cardsArray.concat(cardsArray).sort(function () {
     return 0.5 - Math.random();
 });
@@ -28,7 +32,7 @@ var firstGuess = "";
 var secondGuess = "";
 var count = 0;
 var previousTarget = null;
-var delay = 2200;
+var delay = 1100;
 
 var game = document.getElementById("game1_play");
 var grid = document.createElement("section");
@@ -101,9 +105,23 @@ grid.addEventListener("click", function (event) {
         if (firstGuess && secondGuess) {
             if (firstGuess === secondGuess) {
                 setTimeout(match, delay);
+                score++;
+                document.getElementById("score1").innerHTML="score:" + score;
             }
             setTimeout(resetGuesses, delay);
         }
         previousTarget = clicked;
     }
+    if(score === cardsArray.length){
+        alert("You win");
+        document.getElementById("game1_play").style="display:none";
+        document.getElementById("BTNgame1").style="display:inline";
+        var sec = document.querySelector("section");
+        sec.remove("gird");
+    }
 });
+}
+function CardRestart(){
+    var sec = document.querySelector("section");
+     sec.remove("gird");
+}

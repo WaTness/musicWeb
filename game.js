@@ -4,22 +4,14 @@ function clickGame(i){
     
     for(var j = 1;j <= 5;j++){  
          document.getElementById("BTNgame" + j).style="display:none";
+         document.getElementById("game" + j + "_play").style="display:none";
     }
     document.getElementById("BTNgame" + i).style="display:flex";
     document.getElementById("BTNgame" + i).innerHTML="開始 " + x;
 }
-function StartGame1(i){
 
-}
-function StartGame2(i){
+function StartGame(i){
 
-}
-function StartGame3(i){
-
-}
-function StartGame4(i){
-
-}
-function StartGame5(i){
-
+    document.getElementById("game" + i + "_play").style="display:inline";
+    document.getElementById("BTNgame" + i).style = "display:none";
 }

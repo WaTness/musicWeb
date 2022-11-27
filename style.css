@@ -444,6 +444,7 @@ div.musician:hover
   
   color:white;
   cursor: pointer;
+  
 }
 
 #hide1,#hide2,#hide3,#hide4{
@@ -459,8 +460,8 @@ div.musician:hover
 }
 
 .point{
-  color: rgb(20, 61, 224) ; 
-  font-weight: bold ;
+  color: rgb(183, 35, 12) ; 
+  font-weight:bolder ;
   
 }
 
@@ -566,4 +567,25 @@ div.musician:hover
   transform: rotateY(180deg); }
 
 #game1_play .match .front {
-  background: none !important; }
+  background: none !important; 
+}
+#backMusician{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+}
+#backBTN{
+  font-size: 20px;
+  border-radius: 10px;
+  border-color: #08ef55;
+  background-color: #dbab58;
+}
+#backBTN:hover{
+  background-color: black;
+  color:white;
+}
+.GameScore{
+  text-align: right;
+  margin-right:10px ;
+}
