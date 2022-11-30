@@ -589,3 +589,8 @@ div.musician:hover
   text-align: right;
   margin-right:10px ;
 }
+.instrument{
+  width:50%;
+  height: 400px; 
+  background-color: inherit;
+}

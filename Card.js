@@ -24,6 +24,7 @@ const cardsArray = [
   },
 ]
 var score = 0;
+document.getElementById("score1").innerHTML="score:" + score;
 var gameGrid = cardsArray.concat(cardsArray).sort(function () {
     return 0.5 - Math.random();
 });
