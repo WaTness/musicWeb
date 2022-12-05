@@ -118,11 +118,11 @@ grid.addEventListener("click", function (event) {
         document.getElementById("game1_play").style="display:none";
         document.getElementById("BTNgame1").style="display:inline";
         var sec = document.querySelector("section");
-        sec.remove("gird");
+        sec.remove("grid");
     }
 });
 }
 function CardRestart(){
     var sec = document.querySelector("section");
-     sec.remove("gird");
+     sec.remove("grid");
 }

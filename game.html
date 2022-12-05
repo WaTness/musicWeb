@@ -12,6 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="game.js"></script>
     <script src="Card.js"></script>
+    <script src="brick.js"></script>
     <script>
         $(document).ready(function(){
             $("#B").fadeIn("slow");
@@ -34,10 +35,11 @@
         </table>
     </div>
     <hr>
+   
     <div class = "content" id="B" >
         <ol style="display:block;">
             <a href='#gameName'><div class="game"  onclick="clickGame(1);CardRestart();"><li id="game1">翻牌遊戲</li></div></a>
-            <a href='#gameName'><div class="game"  onclick="clickGame(2)"><li id="game2">翻牌遊戲2</li></div></a>
+            <a href='#gameName'><div class="game"  onclick="clickGame(2);"><li id="game2">翻牌遊戲2</li></div></a>
             <a href='#gameName'><div class="game"  onclick="clickGame(3)"><li id="game3">翻牌遊戲3</li></div></a>
             <a href='#gameName'><div class="game"  onclick="clickGame(4)"><li id="game4">翻牌遊戲4</li></div></a>
             <a href='#gameName'><div class="game"  onclick="clickGame(5)"><li id="game5">翻牌遊戲5</li></div></a>
@@ -48,27 +50,61 @@
         <div id="gameContent">
             <div id="BTNgame">
                 <button id="BTNgame1" class="BTNgame1" onclick="StartGame(1);CardGame();"></button>
-                <button id="BTNgame2" class="BTNgame1" onclick="StartGame(2)"></button>
+                <button id="BTNgame2" class="BTNgame1" onclick="StartGame(2);Z();"></button>
                 <button id="BTNgame3" class="BTNgame1" onclick="StartGame(3)"></button>
                 <button id="BTNgame4" class="BTNgame1" onclick="StartGame(4)"></button>
                 <button id="BTNgame5" class="BTNgame1" onclick="StartGame(5)"></button>
             </div>
             <div id="game1_play" style="display: none;">
                  <h2 id="score1" class="GameScore">Score:0</h2>
-            </div></div>
+            </div>
             
             <div id="game2_play" style="display: none;">
-              
-            </div></div>
-            <div id="game3_play" style="display: none;">
-            </div></div>
-            <div id="game4_play" style="display: none;">
-            </div></div>
-            <div id="game5_play" style="display: none;">
-            </div></div>
-            <canvas >
-                
-            </canvas>
+                <img src="./Images/Mozart.jpg" id="lamp" width="32" height="32">
+                <canvas id="myCanvas" class="brickCanvas" width="600" height="500"></canvas>
+                <script>
+                    
+                    canvas = document.getElementById("myCanvas");
+                    var ctx = canvas.getContext("2d");
+                    var x = canvas.width / 2;
+                    var y = canvas.height - 30;
+                    var dx = 2;
+                    var dy = -2;
+                    var ballRadius = 10;
+                    var paddleHeight = 10;
+                    var paddleWidth = 150;
+                    var paddleX = (canvas.width - paddleWidth) / 2;
+                    var rightPressed = false;
+                    var leftPressed = false;
+                    var brickWidth = 80;
+                    var brickHeight = 50;
+                    var brickColumnCount = 5;
+                    var brickPadding = 10;
+                    var brickOffsetLeft = 30;
+                    var brickRowCount = 4;
+                    var brickOffsetTop = 30;
+                    var score = 0;
+                    var lives = 3;
+                    var bricks = [];
+                    for (var c = 0; c < brickColumnCount; c++) {
+                        bricks[c] = [];
+                        for (var r = 0; r < brickRowCount; r++) {
+                            bricks[c][r] = { x:0,y:0,status: 1 };
+                        }
+                    }
+                    document.addEventListener("keydown", keyDownHandler, false);
+                    document.addEventListener("keyup", keyUpHandler, false);
+                    document.addEventListener("mousemove", mouseMoveHandler, false); 
+                </script>
+            </div>
+    
+                <div id="game3_play" style="display: none;">
+                </div></div>
+                <div id="game4_play" style="display: none;">
+                </div></div>
+                <div id="game5_play" style="display: none;">
+                </div></div>
+
         </div>
         
     </div>

@@ -11,7 +11,7 @@ function clickGame(i){
 }
 
 function StartGame(i){
-
+    
     document.getElementById("game" + i + "_play").style="display:inline";
     document.getElementById("BTNgame" + i).style = "display:none";
 }

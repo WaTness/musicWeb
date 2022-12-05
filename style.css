@@ -594,3 +594,10 @@ div.musician:hover
   height: 400px; 
   background-color: inherit;
 }
+canvas{
+  background:rgb(10, 119, 177);
+  display:block;
+  margin:0 auto;
+  margin-top: 100px;
+  
+}
