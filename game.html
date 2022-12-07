@@ -50,7 +50,7 @@
         <div id="gameContent">
             <div id="BTNgame">
                 <button id="BTNgame1" class="BTNgame1" onclick="StartGame(1);CardGame();"></button>
-                <button id="BTNgame2" class="BTNgame1" onclick="StartGame(2);Z();"></button>
+                <button id="BTNgame2" class="BTNgame1" onclick="StartGame(2);play();Z();"></button>
                 <button id="BTNgame3" class="BTNgame1" onclick="StartGame(3)"></button>
                 <button id="BTNgame4" class="BTNgame1" onclick="StartGame(4)"></button>
                 <button id="BTNgame5" class="BTNgame1" onclick="StartGame(5)"></button>
@@ -61,9 +61,13 @@
             
             <div id="game2_play" style="display: none;">
                 <img src="./Images/Mozart.jpg" id="lamp" width="32" height="32">
-                <canvas id="myCanvas" class="brickCanvas" width="600" height="500"></canvas>
+                <canvas id="myCanvas" class="brickCanvas" width="900" height="500" ></canvas>
+                <div id="backMusician">
+                    <button onclick="play();" class="BrickGamePlayPause">繼續</button>
+                    <button onclick="pause();" class="BrickGamePlayPause">暫停</button>
+                </div>
+                
                 <script>
-                    
                     canvas = document.getElementById("myCanvas");
                     var ctx = canvas.getContext("2d");
                     var x = canvas.width / 2;
@@ -76,9 +80,9 @@
                     var paddleX = (canvas.width - paddleWidth) / 2;
                     var rightPressed = false;
                     var leftPressed = false;
-                    var brickWidth = 80;
-                    var brickHeight = 50;
-                    var brickColumnCount = 5;
+                    var brickWidth = 90;
+                    var brickHeight = 55;
+                    var brickColumnCount = 8;
                     var brickPadding = 10;
                     var brickOffsetLeft = 30;
                     var brickRowCount = 4;
@@ -86,12 +90,18 @@
                     var score = 0;
                     var lives = 3;
                     var bricks = [];
+                    var randNum = 0;
+                    var brickCount=0;
+                    var brickCounts = 0;
                     for (var c = 0; c < brickColumnCount; c++) {
                         bricks[c] = [];
                         for (var r = 0; r < brickRowCount; r++) {
-                            bricks[c][r] = { x:0,y:0,status: 1 };
+                            randNum = Math.floor(Math.random()*2);
+                            bricks[c][r] = { x:0,y:0,status: randNum };
+                            if (randNum == 1){brickCount++}
                         }
                     }
+                    brickCounts = score;
                     document.addEventListener("keydown", keyDownHandler, false);
                     document.addEventListener("keyup", keyUpHandler, false);
                     document.addEventListener("mousemove", mouseMoveHandler, false); 

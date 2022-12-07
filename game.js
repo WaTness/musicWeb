@@ -8,6 +8,7 @@ function clickGame(i){
     }
     document.getElementById("BTNgame" + i).style="display:flex";
     document.getElementById("BTNgame" + i).innerHTML="開始 " + x;
+    pause();
 }
 
 function StartGame(i){

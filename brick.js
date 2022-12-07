@@ -1,5 +1,16 @@
 function Z(){
-    var Z = setInterval(draw, 5);
+    var Z = setInterval(function() {
+    if(!isPaused) {
+        draw();
+    }
+}, 5);
+}
+var isPaused = false;
+function play(){
+    isPaused = false;
+}
+function pause(){
+    isPaused = true;
 }
 function drawPaddle() {
     ctx.beginPath();
@@ -24,6 +35,8 @@ function drawScore() {
     ctx.fillStyle = "#F7B32B";
     ctx.fillText("Score:" + score, 8, 20);
 }
+var brickCount;
+var brickCounts;
 function collisionDetection() {
     for (var c = 0; c < brickColumnCount; c++) {
         for (var r = 0; r < brickRowCount; r++) {
@@ -35,12 +48,16 @@ function collisionDetection() {
                 dy = -dy;
                 b.status = 0;
                 score++;
-                if (score % (brickColumnCount * brickRowCount) == 0) {
-                     for (var c = 0; c < brickColumnCount; c++) {
-                    bricks[c] = [];
-                    for (var r = 0; r < brickRowCount; r++) {
-                        bricks[c][r] = { x:0,y:0,status: 1 };
-                    }
+                if (brickCounts == (score - brickCount)) {
+                    brickCount=0;
+                    for (var c = 0; c < brickColumnCount; c++) {
+                        bricks[c] = [];
+                        for (var r = 0; r < brickRowCount; r++) {
+                            randNum = Math.floor(Math.random()*2);
+                            bricks[c][r] = { x:0,y:0,status: randNum };
+                            if (randNum == 1){brickCount++}
+                        }
+                    brickCounts = score;
                 }
                 clearInterval(Z);
                 lives = 3;
@@ -114,11 +131,15 @@ function draw() {
         else {
             lives -= 1;
             if (lives == 0) {
-                for (var c = 0; c < brickColumnCount; c++) {
-                    bricks[c] = [];
-                    for (var r = 0; r < brickRowCount; r++) {
-                        bricks[c][r] = { x:0,y:0,status: 1 };
-                    }
+                 brickCount=0;
+                    for (var c = 0; c < brickColumnCount; c++) {
+                        bricks[c] = [];
+                        for (var r = 0; r < brickRowCount; r++) {
+                            randNum = Math.floor(Math.random()*2);
+                            bricks[c][r] = { x:0,y:0,status: randNum };
+                            if (randNum == 1){brickCount++}
+                        }
+                    brickCounts = score;
                 }
                 clearInterval(Z);
                 score = 0;
