@@ -1,5 +1,8 @@
+var Z;
 function Z(){
-    var Z = setInterval(function() {
+    clearInterval(Z);
+    Z = null;
+    Z = setInterval(function() {
     if(!isPaused) {
         draw();
     }
@@ -9,9 +12,7 @@ var musicainNum;
 function getNum(i){
     musicainNum="lamp" + i;
 }
-function ZC(){
-    clearInterval(Z);
-}
+
 var isPaused = false;
 function play(){
     isPaused = false;
@@ -67,7 +68,7 @@ function collisionDetection() {
                     brickCounts = score;
                 }
                 
-                lives = 3;
+
                 }
                 }
             }
@@ -168,6 +169,7 @@ function draw() {
     }
     x += dx;
     y += dy;
+    
 }
 
 

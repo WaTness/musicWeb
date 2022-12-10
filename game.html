@@ -40,7 +40,7 @@
         <ol style="display:block;">
             <a href='#gameName'><div class="game"  onclick="clickGame(1);CardRestart();"><li id="game1">翻牌遊戲</li></div></a>
             <a href='#gameName'><div class="game"  onclick="clickGame(2);"><li id="game2">磚塊音樂家</li></div></a>
-            <a href='#gameName'><div class="game"  onclick="clickGame(3)"><li id="game3">翻牌遊戲3</li></div></a>
+            <a href='#gameName'><div class="game"  onclick="clickGame(3)"><li id="game3">音樂家地鼠</li></div></a>
             <a href='#gameName'><div class="game"  onclick="clickGame(4)"><li id="game4">翻牌遊戲4</li></div></a>
             <a href='#gameName'><div class="game"  onclick="clickGame(5)"><li id="game5">翻牌遊戲5</li></div></a>
         </ol>
@@ -68,7 +68,7 @@
                     <img src="./Images/800px-Joseph_Haydn1.jpg" id="lamp4" onclick="getNum(4)">&nbsp;
                     <img src="./Images/Wolfgang-amadeus-mozart_2.jpg" id="lamp5" onclick="getNum(5)">&nbsp;
                 </div>
-                <canvas id="myCanvas" class="brickCanvas" width="1200" height="500" ></canvas>
+                <canvas id="myCanvas" class="brickCanvas" width="1300" height="500" ></canvas>
                 <div id="backMusician">
                     <button onclick="play();" class="BrickGamePlayPause">繼續</button>
                     <button onclick="pause();" class="BrickGamePlayPause">暫停</button>
@@ -87,12 +87,12 @@
                     var paddleX = (canvas.width - paddleWidth) / 2;
                     var rightPressed = false;
                     var leftPressed = false;
-                    var brickWidth = 90;
-                    var brickHeight = 40;
-                    var brickColumnCount = 11;
+                    var brickWidth = 110;
+                    var brickHeight = 30;
+                    var brickColumnCount = 10;
                     var brickPadding = 10;
                     var brickOffsetLeft = 30;
-                    var brickRowCount = 4;
+                    var brickRowCount = 6;
                     var brickOffsetTop = 30;
                     var score = 0;
                     var lives = 3;
@@ -116,6 +116,27 @@
             </div>
     
                 <div id="game3_play" style="display: none;">
+                    <p id="score2" style="margin-left: 20px;">score:0</p>
+
+                    <table >
+                        <tbody style="height:600px;">
+                            <tr>
+                                <td style="text-align: center;"><img src="./Images/" width="300px" height="200px"></td>
+                                <td style="text-align: center;"><img src="./Images/" width="300px" height="200px"></td>
+                                <td style="text-align: center;"><img src="./Images/" width="300px" height="200px"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;"><img src="./Images/" width="300px" height="200px"></td>
+                                <td style="text-align: center;"><img src="./Images/" width="300px" height="200px"></td>
+                                <td style="text-align: center;"><img src="./Images/" width="300px" height="200px"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;"><img src="./Images/" width="300px" height="200px"></td>
+                                <td style="text-align: center;"><img src="./Images/" width="300px" height="200px"></td>
+                                <td style="text-align: center;"><img src="./Images/800px-Joseph_Haydn.jpg" width="300px" height="200px "></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div></div>
                 <div id="game4_play" style="display: none;">
                 </div></div>

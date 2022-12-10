@@ -12,6 +12,7 @@
     <script src="Hello.js"></script>
     <script src="mousedown.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="AudioControl.js"></script>
     <script>
         $(document).ready(function(){
             $("#B").fadeIn("slow");
@@ -462,9 +463,15 @@
         <div id="InstrumentContent">
             <h4>音樂</h4>
             <p>
+                <select id="selectMusic">
+                    <option>選擇音樂</option>
+                    <option id="select1" value="Mozart - Symphony No 40 (Molto Allegro).mp3">交響曲40號</option>
+                </select>
+                <button onclick="MozartAudioTest();">播放</button>
                 <div class="audio-container">
-                    <audio src="./Audios/莫扎特G小調第《40號交響曲》K550Ⅰ Mozart no40 in G minorK550 Ⅰ （FULL VERSION）.mp3" loop controls ></audio>
+                    <audio id="audioController" src=""  loop controls ></audio>
                 </div>
+                
             </p>
             <h4>樂器</h4>
             <p>
