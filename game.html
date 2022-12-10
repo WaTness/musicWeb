@@ -39,7 +39,7 @@
     <div class = "content" id="B" >
         <ol style="display:block;">
             <a href='#gameName'><div class="game"  onclick="clickGame(1);CardRestart();"><li id="game1">翻牌遊戲</li></div></a>
-            <a href='#gameName'><div class="game"  onclick="clickGame(2);"><li id="game2">翻牌遊戲2</li></div></a>
+            <a href='#gameName'><div class="game"  onclick="clickGame(2);"><li id="game2">磚塊音樂家</li></div></a>
             <a href='#gameName'><div class="game"  onclick="clickGame(3)"><li id="game3">翻牌遊戲3</li></div></a>
             <a href='#gameName'><div class="game"  onclick="clickGame(4)"><li id="game4">翻牌遊戲4</li></div></a>
             <a href='#gameName'><div class="game"  onclick="clickGame(5)"><li id="game5">翻牌遊戲5</li></div></a>
@@ -60,8 +60,15 @@
             </div>
             
             <div id="game2_play" style="display: none;">
-                <img src="./Images/Mozart.jpg" id="lamp" width="32" height="32">
-                <canvas id="myCanvas" class="brickCanvas" width="900" height="500" ></canvas>
+                <div class="chooseMusician">
+                    <p>請點擊人物頭像</p>
+                    <img src="./Images/Mozart.jpg" id="lamp1" onclick="getNum(1)">&nbsp;
+                    <img src="./Images/Beethoven1.jpg" id="lamp2" onclick="getNum(2)">&nbsp;
+                    <img src="./Images/Johann_Sebastian_Bach.jpg" id="lamp3" onclick="getNum(3)">&nbsp;
+                    <img src="./Images/800px-Joseph_Haydn1.jpg" id="lamp4" onclick="getNum(4)">&nbsp;
+                    <img src="./Images/Wolfgang-amadeus-mozart_2.jpg" id="lamp5" onclick="getNum(5)">&nbsp;
+                </div>
+                <canvas id="myCanvas" class="brickCanvas" width="1200" height="500" ></canvas>
                 <div id="backMusician">
                     <button onclick="play();" class="BrickGamePlayPause">繼續</button>
                     <button onclick="pause();" class="BrickGamePlayPause">暫停</button>
@@ -81,8 +88,8 @@
                     var rightPressed = false;
                     var leftPressed = false;
                     var brickWidth = 90;
-                    var brickHeight = 55;
-                    var brickColumnCount = 8;
+                    var brickHeight = 40;
+                    var brickColumnCount = 11;
                     var brickPadding = 10;
                     var brickOffsetLeft = 30;
                     var brickRowCount = 4;

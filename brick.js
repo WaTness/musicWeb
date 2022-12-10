@@ -5,6 +5,13 @@ function Z(){
     }
 }, 5);
 }
+var musicainNum;
+function getNum(i){
+    musicainNum="lamp" + i;
+}
+function ZC(){
+    clearInterval(Z);
+}
 var isPaused = false;
 function play(){
     isPaused = false;
@@ -59,7 +66,7 @@ function collisionDetection() {
                         }
                     brickCounts = score;
                 }
-                clearInterval(Z);
+                
                 lives = 3;
                 }
                 }
@@ -77,7 +84,7 @@ function drawBricks() {
                 bricks[c][r].x = brickX;
                 bricks[c][r].y = brickY;
                 
-                var img = document.getElementById("lamp")
+                var img = document.getElementById(musicainNum);
                 var pat = ctx.createPattern(img, "repeat");  
                 ctx.rect(brickX, brickY, brickWidth, brickHeight);
                 ctx.fillStyle = pat;    
@@ -139,9 +146,9 @@ function draw() {
                             bricks[c][r] = { x:0,y:0,status: randNum };
                             if (randNum == 1){brickCount++}
                         }
-                    brickCounts = score;
+                    brickCounts = 0;
                 }
-                clearInterval(Z);
+                
                 score = 0;
                 lives = 4;
             } else {
