@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>貝多芬</title>
+    <style >
+        @import url(style.css);
+    </style>
+    <script src="fuc.js"></script>
+    <script src="Hello.js"></script>
+    <script src="mousedown.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="AudioControl.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#B").fadeIn("slow");
+            $("#DownMenu").fadeIn("slow");
+        })
+    </script>
+    <script>
+        var JQIdSelectHide = {
+            hide1:"lifeContent",
+            hide2:"ComposeContent",
+            hide3:"InstrumentContent",
+            hide4:"EffectContent"
+        }       
+        $(document).ready(function(){
+            $('#MozartYoung').hover(function(){
+                $('#MozartYoungDes').fadeIn();
+                $('#MozartYoungDes1').fadeIn();
+            })
+            $('#MozartYoung').mouseleave(function(){
+                $('#MozartYoungDes').fadeOut();
+                $('#MozartYoungDes1').fadeOut();
+            })
+            
+            $('#hide1').click(function(){   
+                $('#' + JQIdSelectHide.hide1).slideUp();
+                $('#show1' ).css('background-color','#0e9c3d')
+                $('#hide1').css('background-color',' #08ef55')
+                
+            })
+            $('#show1').click(function(){
+                $('#' + JQIdSelectHide.hide1).slideDown();
+                $('#hide1').css('background-color','#0e9c3d')
+                $('#show1').css('background-color','#08ef55')
+                })
+
+            $('#hide2').click(function(){   
+                $('#' + JQIdSelectHide.hide2).slideUp();
+                $('#show2' ).css('background-color','#0e9c3d')
+                $('#hide2').css('background-color',' #08ef55')
+                
+            })
+            $('#show2').click(function(){
+                $('#' + JQIdSelectHide.hide2).slideDown();
+                $('#hide2').css('background-color','#0e9c3d')
+                $('#show2').css('background-color','#08ef55')
+                })
+            $('#hide3').click(function(){   
+                $('#' + JQIdSelectHide.hide3).slideUp();
+                $('#show3' ).css('background-color','#0e9c3d')
+                $('#hide3').css('background-color',' #08ef55')
+                
+            })
+            $('#show3').click(function(){
+                $('#' + JQIdSelectHide.hide3).slideDown();
+                $('#hide3').css('background-color','#0e9c3d')
+                $('#show3').css('background-color','#08ef55')
+                })
+            $('#hide4').click(function(){   
+                $('#' + JQIdSelectHide.hide4).slideUp();
+                $('#show4' ).css('background-color','#0e9c3d')
+                $('#hide4').css('background-color',' #08ef55')
+                
+            })
+            $('#show4').click(function(){
+                $('#' + JQIdSelectHide.hide4).slideDown();
+                $('#hide4').css('background-color','#0e9c3d')
+                $('#show4').css('background-color','#08ef55')
+                })
+        })
+    </script>
+</head>
+<body onload="clock()">
+    <h1 class="title" id ="title">貝多芬</h1>
+    <div class = "index">
+        <table>
+            <thead>
+                <tr>
+                    <th class ="Ntouch"><a href="index.html" style="display:block;">Home</a></th>
+                    <th style = "background-color:rgb(167, 162, 239);color:gold;">人物</th>
+                    <th class ="Ntouch"><a href="game.html" style="display:block;">小遊戲</th>
+                    <th class ="Ntouch"><a href="work_date.html" style="display:block;">工作日程表</th>
+                    <th class ="Ntouch"><a href="contact.html" style="display:block;">contact</a></th>
+                    <th class ="Ntouch"><a href="about.html" style="display:block;">about</a></th>
+                </tr>
+        </table>
+    </div>
+    <div id="backMusician"><a href="./musician.html"><button id="backBTN">返回人物選單</button></a></div>
+    
+        <div class="menu" id="DownMenu">
+                <ul class="hList">
+                <li>
+                    <a href="#life" class="menu">
+                    <h2 class="menu-title">生平</h2>
+                    <ul class="menu-dropdown">
+                        <li>背景與童年</li>
+                        <li>音樂啟蒙</li>
+                        <li>紮根維也納</li>
+                        <li>1804-1815年</li>
+                        <li>晚年</li>
+                        <li>逝世</li>
+                    </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Compose" class="menu">
+                    <h2 class="menu-title menu-title_2nd">作品</h2>
+                    <ul class="menu-dropdown">
+                        <li>創作生涯及分期</li>
+                        <li>各類型作品</li>
+                    </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Instrument" class="menu">
+                    <h2 class="menu-title menu-title_3rd">音樂及樂器</h2>
+                    <ul class="menu-dropdown">
+                    </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Effect" class="menu">
+                    <h2 class="menu-title menu-title_4th">影響</h2>
+                    <ul class="menu-dropdown">
+                        <li>流行文化</li>
+                        <li>影視作品</li>
+                        <li>音樂劇</li>
+                    </ul>
+                    </a>
+                </li>
+            </ul>  
+        </div>
+    <hr>
+    <div class = "content" id="B">
+        <section style="display:flex;">
+            <h1 id="life">生平&nbsp;&nbsp;</h1>
+            <button id="hide1" class="buttonShowHide" style="height: 30px;" >隱藏</button>
+            <button id="show1" class="buttonShowHide" style="height: 30px;" >顯示</button>
+            <h3 style="margin-left:30px ;"><a href =#title>Go Top</a></h3>
+        </section>
+       
+        <hr class="main">
+        <div id="lifeContent">
+            <p>
+                路德維希·范·貝多芬（德語：Ludwig van Beethoven；1770年12月16日－1827年3月26日），
+                德意志作曲家、鋼琴演奏家。貝多芬上承古典樂派傳統，下啟浪漫樂派之風格與精神，
+                因而在音樂史上占有重要的地位。貝多芬雖然經歷聽力下降，仍一直創作音樂，
+                他一生創作了9部交響曲、36首鋼琴奏鳴曲（其中32首帶有編號，1首未完成，
+                編號為WoO. 51）、10部小提琴奏鳴曲、16首弦樂四重奏、1部歌劇及2部彌撒曲等等。
+                這些作品無論是在曲式、和聲以及織體上都有重大創新，對音樂發展有著深遠影響，其中32首鋼琴奏鳴曲，
+                交響曲《命運》、《田園》、《英雄》、《合唱》和《莊嚴彌撒》據代表性且廣為流傳。1827年貝多芬因病逝世。
+                在漢字文化圈甚至有人尊稱貝多芬為「樂聖」。
+            </p>
+            <h3 id = "1756">背景與童年</h3>
+            <hr class="second">
+            <div id="BeethovenYoung">
+                <p id="BeethovenYoungDes1" style="text-align: center; display: none;"><br><br><br><br><br>幼年莫札特</p>
+                <p id="BeethovenYoungDes" style="display: none;">1763年匿名的油畫作品，可能由彼得羅·安東尼奧·洛倫佐尼所繪</p>
+            </div>
+            <p>
+                路德維希·范·貝多芬原籍南尼德蘭（今比利時）梅赫倫鎮的法蘭德斯族人。
+                <ul>
+                    <li>曾祖父Michael van Beethoven是梅赫倫鎮的法蘭德斯人</li>
+                    <li>曾祖母Marie Louise Stuyckers是南尼德蘭（今比利時）另一族瓦隆族人</li>
+                    <li>即貝多芬祖父Ludovicus van Beethoven生於梅赫倫。</li>
+                    <li>外祖父Johann Heinrich Keverich與外祖母Anna Clara Westorff都生於神聖羅馬帝國的特里爾選侯國（今屬德國萊因蘭地理大區）的科布倫茨</li>
+                    <li><span class="point">貝多芬本人生於神聖羅馬帝國的科隆選侯國首府波昂（今德國萊因蘭地理大區）</span></li>
+                </ul>
+                血統而言，貝多芬是75%日耳曼人，18.75%比利時法蘭德斯人，6.25%比利時瓦隆人。
+                <br>
+                貝多芬名字中的「范」（van）是弗拉芒語（又譯法蘭德斯語，荷語方言）而非德語中的「馮」（von），不代表任何貴族封號，而是用來顯示其家鄉。
+                貝多芬的祖父，也同名路德維希·范·貝多芬，20歲時遷居波昂，在科隆選帝侯宮廷內當一位樂團長。
+                父親約翰則是一位唱詩班男高音。
+                母親瑪麗亞·馬達琳娜·凱維利希（Maria Magdalena Keverich）是宮廷御廚的女兒。
+                1770年12月17日，這段婚姻中的第二個兒子以「盧多維克斯·范·貝多芬」（Ludovicus van Beethoven）之名受洗。
+                日後人們普遍認為，這個孩子是在1770年12月16日出生於波昂的波昂街20號。
+                路德維希的父母還生下了五個子女，但只有第二和第三個活了下來：
+                <ul>
+                    <li>卡斯帕·安東·卡爾·范·貝多芬（Kaspar Anton Karl van Beethoven）</li>
+                    <li>尼古拉斯·約翰·范·貝多芬（Nikolaus Johann van Beethoven）</li>
+                    <li>不幸夭折的三位則是：安娜·馬里亞·弗蘭切斯卡（Anna Maria Franziska，只活了四歲）、
+                        弗蘭茲·格奧爾格（Franz Georg，兩歲時離世），以及馬里亞·馬格麗塔（Maria Margaretha，
+                        在周歲之年夭折）</li>
+                </ul>
+                早期貝多芬家庭情況還算如意；約翰的經濟狀況不錯，老路德維希在經濟上也能幫助一下這個家庭。
+                <br>
+                <span class="point">約翰有酗酒的習慣且脾氣暴躁，母親則體弱多病，這是日後作為長子的貝多芬必須挑起家庭重擔的重要原因之一。</span>
+                也正是因此，貝多芬愛母親遠勝於父親。<span class="point">貝多芬可能在5歲時患有中耳炎，但並沒有得到很好的治療，這可能為其日後的耳疾埋下禍根。</span>
+                <br>
+                <span class="point">
+                    貝多芬很小就開始接受音樂訓練，啟蒙老師正是其父。
+                    六歲就能作曲的莫札特無疑給貝多芬的父親立了一個榜樣。為了使自己的兒子貝多芬也成為一位神童，約翰很早就教貝多芬彈奏鋼琴，稍有彈錯就是一頓毒打，而彈錯的後果就是經常被酗酒的父親拍貝多芬的頭。
+                </span>
+                這樣的做法雖然使得貝多芬以八歲（1778年）之齡就能在科隆登台演出，十一歲就在劇院樂團演出，
+                十三歲就成為風琴師，並發表了三首奏鳴曲，但卻顯得揠苗助長。約翰有時甚至會在深夜將貝多芬從床上拉起，
+                要他在朋友面前演示其音樂才能。十一歲時，貝多芬因為父親財力不濟而被迫輟學，
+                因此他在學校所學到的應該不會很多；而此時的貝多芬和其他同齡的孩子是沒有什麼差別的。
+            </p>
+            <h3>音樂啟蒙</h3>
+            <hr class="second">
+            <p>
+                由於父親約翰的音樂教育缺乏系統性，另請高明以發掘貝多芬的潛能。
+                <span class="point">1781年（一說1782年）貝多芬跟隨樂團指揮克里斯蒂安·戈特洛寶·奈弗學習鋼琴和作曲，另外還跟法蘭茲·安東·里斯學習小提琴，這些新老師的努力使得貝多芬開始形成自己獨特的風格。</span>
+                奈弗不但看出了貝多芬的優勢所在，也能察覺其弱點：<span class="point">缺乏自制力、修養和紀律</span>
+                。他要求貝多芬研習前輩的作品，如巴哈的《平均律鋼琴曲集》；再來是同時代音樂家的名篇，如莫札特的作品。
+                1782年，奈弗發表了貝多芬的第一部作品《以戴斯勒先生一首進行曲為主題的羽管鍵琴變奏曲》（Variations pour le Clavecin sur une Marche de Mr. Dressler）。貝多芬在1783年（一說1782年）代表奈弗出任宮廷樂團羽管鍵鋼琴演奏家。
+                <br>
+                <span class="point">奈弗在一音樂雜誌撰文道：
+                    這位年輕的天才應該在其藝術修養方面得到更多的幫助，只要他能堅持不懈，一定會成為莫札特第二。
+                    </span>
+                    1787年，他決定帶著科隆大主教馬克思·法蘭茲（神聖羅馬帝國約瑟夫二世的弟弟）
+                    的推薦信前往維也納試圖拜訪莫札特。據傳，莫札特在忙於創作《唐璜》時，
+                    仍抽出時間給貝多芬一個主題做即興演奏，而貝多芬的演奏打動了莫札特，因此說道：
+                    「注意這位年輕人，日後他會揚名天下。」
+                    <br>
+                    後來，貝多芬得到母親的病危的消息，他離開維也納回家鄉，但母親的病情並未好轉；她的逝世，無疑將家庭整個託付給貝多芬。
+                    <br>
+                    為了養家，1788年（一說1789年）到1792年間，貝多芬在奈弗的一支歌劇院樂團裡擔任中提琴演奏，從而接觸到當時的歌劇作品。
+                    1787年起，<span class="point">貝多芬受到歐洛吉奧·施內德的影響，使他瞭解當時啟蒙運動和法國大革命的思想。</span>
+                    這種影響，反映在貝多芬後來的作品中，特別是有著解放政治囚徒情節的《費德里奧》裡面。
+                    <br>
+                    1790年2月20日，約瑟夫二世逝世，波昂的「讀書與休養」協會準備在3月份舉行悼念，在施內德的建議之下，貝多芬創作了一部
+                    <span class="point">《為約瑟夫二世逝世所作的悼念清唱劇》</span>（德語：Trauerkantate auf den Tod Josephs II.，WoO. 87），這也是貝多芬第一部與政治沾上邊的作品。
+                    <br>
+                    後來，貝多芬還為新皇帝利奧波德二世的登基寫了一部清唱劇：
+                    <span class="point">《為利奧波德二世登基而作的清唱劇》</span>
+                    （德語：Kantate auf die Erhebung Leopolds II. zur Kaiserwürde，WoO 88），
+                    這是一部身世更模糊的作品。它們不但在當時沒得到上演的機會，現在也是很難聽到
+                    （克里斯蒂安·蒂勒曼在DG公司錄製了它們）。雖然如此，並不意味著它們沒有可道之處；相反地，
+                    這兩部早期作品其實已頗具大家風範。特別是《利奧波德》裡那首長大的詠歎調，
+                    大提琴托著女高音的行文樣式，讓人倍感新鮮的同時，還有一種脫俗的美。
+                    <br>
+                    不久之後，
+                    <span class="point">奧地利作曲家海頓在從維也納到倫敦的旅程中兩次在波昂逗留，接觸到貝多芬，
+                        並對前一首清唱劇大加讚賞，海頓因此勸科隆大主教將貝多芬送到維也納深造。
+                        而貝多芬也沒有錯過這個機會，於1792年再度踏上前往維也納的行程。</span>
+                </p>
+            <h3>紮根維也納</h3>
+            <hr class="second">
+            <p>
+                到海頓處上課，直到海頓1794年去倫敦為止，超過一年。年邁的海頓並沒有撥出太多時間給這位年輕學生，
+                再加上貝多芬的性格是出了名的倔強。貝多芬在師從海頓這段時期，已經開始意識到自己的能力，
+                並有時現出挑戰的意味。因此在據說海頓強烈批評他的作品1的第三首三重奏時
+                （它正是貝多芬自己認為三首裡面最好的一首），貝多芬會認為這是妒嫉使然。但
+                <span class="point">海頓可能並非詬病作品的品質，而是作品裡面的「大眾化」，
+                    亦即一般的業餘演奏者也能輕易上手其作品，而且其內容迎合了當時大眾的品味。如果真是這樣的話，
+                    海頓的批評則體現了18世紀末古典主義與浪漫主義的衝突，即：音樂是否是專屬上層階級的奢侈品？
+                    貝多芬無疑正在努力打破這種貴族特權，夾在第二鋼琴協奏曲和第一交響曲之間的七重奏（作品20）
+                    是一首優雅幽香的作品，貝多芬甚至「逼」出版商道：「快點將我的七重奏給這個世界吧，因為大眾正等著它。」</span>
+                    海頓前往倫敦之後，貝多芬則繼續他在維也納的學習，他得到約翰·申克的指導，
+                    並且在約翰·格奧爾格·阿爾布雷希茨貝格門下學習了一年的對位法。
+                    著名的薩列里也為貝多芬非正式地上過聲樂課，阿羅伊斯·福斯特（Alois Forster）
+                    則教貝多芬弦樂四重奏。可以說，貝多芬在維也納不但學習到當時最先進的音樂理論，
+                    而且體會了前輩的音樂實踐經驗。他在此期間寫有三首鋼琴、小提琴和大提琴三重奏（即作品1）
+                    、三首鋼琴奏鳴曲（作品2）、一首弦樂五重奏，和兩首鋼琴和大提琴奏鳴曲（作品5）。
+                    他在沙龍裏舉行小型音樂會，能得到一些貴族的賞識。貝多芬的贊助人有很多，
+                    其中包括卡爾·馮·里希諾夫斯基侯爵，安德烈·拉祖莫夫斯基公爵，埃斯特哈奇（Esterházy）
+                    親王和約瑟夫·洛伯科維茨親王。再後來，版權成為貝多芬的收入來源。他並不非常喜歡當一名音樂老師，
+                    教授音樂大部分是為了獲得收入。但是他的確當過鋼琴課家教，
+                    其學生中不乏有名的演奏家如不倫瑞克的特雷莎公主，或是多羅蒂阿·厄特曼（Dorothea Ertmann）。
+                    <br>
+                    <span class="point">1795年，貝多芬在維也納舉行了第一次音樂會，曲目是他於1794到1795年創作的B♭大調第二號鋼琴協奏曲（作品19），
+                        由他本人演奏鋼琴，這次演出獲得了成功。這首鋼琴協奏曲被普遍認為頗有「維也納味」。當時有人評論道，
+                        作為鋼琴家的貝多芬有著「火花、光彩、幻想還有深邃的情感。」</span>
+                        這次音樂會，是貝多芬第一次向維也納展示自己。
+                </p>
+            <h4>巴黎之行與返回（1777年－1781年）</h4>
+            <p>
+                
+            </p>
+            <h4>離開</h4>
+            <p>
+                
+            </p>
+            <h3>維也納（1781年－1791年）</h3>
+            <hr class="second">
+            <h4>初期</h4>
+            <p>
+
+            </p>
+            <h4>發展</h4>
+            <p>
+
+            </p>
+            <h4>投入歌劇</h4>
+            <p>
+
+            </p>
+            <h4>晚景</h4>
+            <p>
+
+            </p>
+            <h4>病逝</h4>
+            <p>
+
+            </p>
+        </div>
+        <section style="display:flex;">
+            <h1 id="Compose">作品&nbsp;&nbsp;</h1>
+            <button id="hide2" class="buttonShowHide" style="height: 30px;">隱藏</button>
+            <button id="show2" class="buttonShowHide" style="height: 30px;">顯示</button>
+            <h3 style="margin-left:30px ;"><a href =#title>Go Top</a></h3>
+        </section>
+        <hr class="main">
+        <div id="ComposeContent">
+            <h3>音樂成就及特色</h3>
+            <p>
+                貝多芬的作品包括:
+                <ul class="point">
+                    <li>32首鋼琴奏鳴曲</li>
+                    <li>9部交響曲</li>
+                    <li>5部鋼琴協奏曲</li>
+                    <li>小提琴協奏曲</li>
+                    <li>三重協奏曲和弦樂四重奏</li>
+                </ul>
+                帶Op編號的作品有138部。至於帶有WoO.標籤的作品則有205部，表示該作品是「Werke ohne Opus-Nummer」
+                （不帶Op編號的作品），這些作品雖然有很多在他生前都被發表了，但是他並不認為這些作品值得配上一個Op號
+                。而比較少見的是帶「Hess」編號的作品，共14卷，這些作品是由瑞士作曲家威利·黑斯（Willy Hess）
+                為貝多芬作品全集作出的補充。
+                貝多芬<span class="point">最著名的作品包括:
+                <ul>
+                    <li>第三交響曲《英雄》</li>
+                    <li>第五交響曲《命運》</li>
+                    <li>第六交響曲《田園》</li>
+                    <li>第九交響曲《合唱》</li>
+                    <li>《悲愴》奏鳴曲</li>
+                    <li>《月光》奏鳴曲</li>
+                </ul>
+                </span>
+                其32首編號鋼琴奏鳴曲，
+                包括《悲愴》和《月光》等被漢斯·馮·畢羅尊稱為鋼琴的「新約」。他早期的音樂，
+                <span class="point">受海頓和莫札特的古典主義風格影響很大</span>，如第一交響曲。而在早期鋼琴奏鳴曲，如《悲愴》中，
+                其和聲歌手特點、八度的頻繁以及豐富厚實的織體，體現了穆齊奧·克萊門蒂和楊·杜賽克對貝多芬的影響。
+                到了中後期，作品越發表現出他強烈的個人風格，貝多芬甚至藉著音樂道出自己的理想和訴求。
+                貝多芬可以說繼承了德奧作曲家巴哈、海頓和莫札特的音樂精髓，將古典主義音樂在形式方面做到了極限。
+            
+            </p>
+            <h3>創作生涯與分期</h3>
+            <p>
+                1855年，蘭茲提出了對貝多芬創作時期的著名三分法。雖然這一劃分不斷遭受批評，
+                說其中有過分絕對化和不夠確切的現象，但是它卻非常有助於人們體會貝多芬創作風格的發展：
+            </p>
+        </div>
+        <section style="display:flex;">
+            <h1 id="Instrument">音樂及樂器&nbsp;&nbsp;</h1>
+            <button id="hide3" class="buttonShowHide" style="height: 30px;">隱藏</button>
+            <button id="show3" class="buttonShowHide" style="height: 30px;">顯示</button>
+            <h3 style="margin-left:30px ;"><a href =#title>Go Top</a></h3>
+        </section>
+        <hr class="main">
+        <div id="InstrumentContent">
+            <h4>音樂</h4>
+            <p>
+                <select id="selectMusic">
+                    <option>選擇音樂</option>
+                    <option id="select1" value="Mozart - Symphony No 40 (Molto Allegro).mp3">交響曲40號</option>
+                    <option id="select2" value="Requiem KV 626 Lacrimosa.mp3">KV 626</option>
+                    <option id="select3" value="Serenade 13 In G K 525 Eine Kleine Nachtmusik - 1 Allegro.mp3">K 525</option>
+                    <option id="select4" value="Hélène Grimaud – Mozart Piano Concerto No 23 II Adagio.mp3">協奏曲23號II Adagio</option>
+                    <option id="select5" value="I Allegro assai.mp3">Allegro assai</option>
+                    <option id="select6" value="Sonate N11.mp3">Sonate N11</option>
+                    <option id="select7" value="The Marriage Of Figaro - Overture.mp3">The Marriage Of Figaro - Overture</option>
+                </select>
+                <button onclick="MozartAudioTest();">確定</button>
+                <div class="audio-container">
+                    <audio id="audioController" src=""  loop controls ></audio>
+                </div>
+                
+            </p>
+            <h4>樂器</h4>
+            <p>
+                雖然莫札特<span class="point"></span>早期的一些作品是為大鍵琴而寫的</span>，但他早年也結識了雷根斯堡製造家弗蘭茨·雅各布·斯帕斯。
+                後來莫札特在訪問奧格斯堡時，對史坦因鋼琴留下了深刻的印象，並在給父親的信中分享了這一點。1777年10月22日，
+                莫札特曾使用史坦因的鋼琴首次公開彈奏了他的鋼琴三重奏(K.242)。 奧格斯堡大教堂管風琴師德姆勒演奏第一部分，
+                莫札特演奏第二部分，史坦因演奏第三部分。1783年，在他居住在維也納期間，他購買了一架瓦爾特的鋼琴。
+                列奧波爾德·莫札特（Leopold Mozart）證實了莫札特對他的瓦爾特古鋼琴的熱愛：「無法形容那種忙碌和繁忙。
+                你的哥哥的古鋼琴從他家到劇院或到別人家至少搬了12次。」
+            </p>
+            
+        </div>
+        <section style="display:flex;">
+            <h1 id="Effect">影響&nbsp;&nbsp;</h1>
+            <button id="hide4" class="buttonShowHide" style="height: 30px;">隱藏</button>
+            <button id="show4" class="buttonShowHide" style="height: 30px;">顯示</button>
+            <h3 style="margin-left:30px ;"><a href =#title>Go Top</a></h3>
+        </section>
+        <hr class="main">
+        <div id="EffectContent">
+
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!4v1668215797621!6m8!1m7!1sCAoSLEFGMVFpcE5Zc3E1OXo5ZklGMWJfUFk1WFhaLV9YODVfQVNEV2ZnZWdfQnRI!2m2!1d47.8027191!2d13.0437899!3f144.2741119735219!4f13.382188224463206!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!4v1668215920483!6m8!1m7!1sOiwWdE-6kYmTu9O_N1HClQ!2m2!1d47.80013836511766!2d13.04349549401289!3f179.184597554019!4f26.025961185484874!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+    <h3 style="margin-left:30px ;"><a href =#title>Go Top</a></h3>
+</body>
+<footer class ="foot">
+    <hr>
+        &#9733;銘傳大學 音樂分組報告  
+        <script>
+            document.write("<h5 style=\"color:brown\"><i>網頁最後修改日期" + document.lastModified + "</i></h5>");
+        </script>
+            <div style="font-size: 50px;">
+                <img id="sec5" src="#" width="50" height="50" />
+                <img id="sec6" src="#" width="50" height="50" />時
+                <img id="sec3" src="#" width="50" height="50" />
+                <img id="sec4" src="#" width="50" height="50" />分
+                <img id="sec1" src="#" width="50" height="50" />
+                <img id="sec2" src="#" width="50" height="50" />秒
+        </div> 
+        
+</footer>       
+        
+</html>
