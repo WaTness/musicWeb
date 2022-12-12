@@ -13,6 +13,7 @@
     <script src="game.js"></script>
     <script src="Card.js"></script>
     <script src="brick.js"></script>
+    <script src="WhackaMole.js"></script>
     <script>
         $(document).ready(function(){
             $("#B").fadeIn("slow");
@@ -51,7 +52,7 @@
             <div id="BTNgame">
                 <button id="BTNgame1" class="BTNgame1" onclick="StartGame(1);CardGame();"></button>
                 <button id="BTNgame2" class="BTNgame1" onclick="StartGame(2);play();Z();"></button>
-                <button id="BTNgame3" class="BTNgame1" onclick="StartGame(3)"></button>
+                <button id="BTNgame3" class="BTNgame1" onclick="StartGame(3);"></button>
                 <button id="BTNgame4" class="BTNgame1" onclick="StartGame(4)"></button>
                 <button id="BTNgame5" class="BTNgame1" onclick="StartGame(5)"></button>
             </div>
@@ -116,27 +117,44 @@
             </div>
     
                 <div id="game3_play" style="display: none;">
-                    <p id="score2" style="margin-left: 20px;">score:0</p>
-
-                    <table >
-                        <tbody style="height:600px;">
-                            <tr>
-                                <td style="text-align: center;"><img src="./Images/" width="300px" height="200px"></td>
-                                <td style="text-align: center;"><img src="./Images/" width="300px" height="200px"></td>
-                                <td style="text-align: center;"><img src="./Images/" width="300px" height="200px"></td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: center;"><img src="./Images/" width="300px" height="200px"></td>
-                                <td style="text-align: center;"><img src="./Images/" width="300px" height="200px"></td>
-                                <td style="text-align: center;"><img src="./Images/" width="300px" height="200px"></td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: center;"><img src="./Images/" width="300px" height="200px"></td>
-                                <td style="text-align: center;"><img src="./Images/" width="300px" height="200px"></td>
-                                <td style="text-align: center;"><img src="./Images/" width="300px" height="200px "></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <button onclick="startWhack();" style="margin: 10px;font-size: 25px;">計時開始</button>
+                    <p class="score2" style="margin-left: 20px;">0</p>
+                    <div class="game3Hole">
+                        <div class="hole hole1">
+                          <div class="mole"></div>
+                        </div>
+                        <div class="hole hole2">
+                          <div class="mole"></div>
+                        </div>
+                        <div class="hole hole3">
+                          <div class="mole"></div>
+                        </div>
+                        <div class="hole hole4">
+                          <div class="mole"></div>
+                        </div>
+                        <div class="hole hole5">
+                          <div class="mole"></div>
+                        </div>
+                        <div class="hole hole6">
+                          <div class="mole"></div>
+                        </div>
+                        <div class="hole hole7">
+                            <div class="mole"></div>
+                          </div>
+                          <div class="hole hole8">
+                            <div class="mole"></div>
+                          </div>
+                          <div class="hole hole9">
+                            <div class="mole"></div>
+                          </div>
+                          <script>
+                            moles.forEach(function (mole) {
+                                mole.addEventListener('click', score());
+                            });
+                          </script>
+                      </div>
+                      
+                   
                 </div></div>
                 <div id="game4_play" style="display: none;">
                 </div></div>
