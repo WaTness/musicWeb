@@ -46,18 +46,13 @@ function popUp() {
 
 let currentScore = 0;
 
-function score(event) {
-  if(!event.isTrusted) return;
-  currentScore++;
-  scoreBoard.innerHTML = currentScore;
-  this.parentNode.classList.remove('up'); 
-};
+
 let turnOff = false;
 
 function startWhack() {
   scoreBoard = document.querySelector('.score2');
   currentScore = 0;
-  scoreBoard.innerHTML = currentScore;
+  scoreBoard.innerHTML = "score:" + currentScore;
   popUp();
   setTimeout(function () {
     turnOff = true;

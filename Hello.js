@@ -5,8 +5,8 @@ function Beethoven(){
     window.alert("歡迎來到貝多芬世界")
 }
 function Bach(){
-    window.alert("HIHI")
+    window.alert("歡迎來到巴赫世界")
 }
 function Haydn(){
-    window.alert("HIHI")
+    window.alert("歡迎來到海頓世界")
 }

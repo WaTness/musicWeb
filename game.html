@@ -14,6 +14,7 @@
     <script src="Card.js"></script>
     <script src="brick.js"></script>
     <script src="WhackaMole.js"></script>
+    <script src="AudioControl.js"></script>
     <script>
         $(document).ready(function(){
             $("#B").fadeIn("slow");
@@ -38,6 +39,22 @@
     <hr>
    
     <div class = "content" id="B" >
+        <select id="selectMusic">
+            <option>選擇音樂</option>
+            <optgroup label="莫札特">
+                <option id="select1" value="Mozart - Symphony No 40 (Molto Allegro).mp3">交響曲40號</option>
+                <option id="select2" value="Requiem KV 626 Lacrimosa.mp3">KV 626</option>
+                <option id="select3" value="Serenade 13 In G K 525 Eine Kleine Nachtmusik - 1 Allegro.mp3">K 525</option>
+                <option id="select4" value="Hélène Grimaud – Mozart Piano Concerto No 23 II Adagio.mp3">協奏曲23號II Adagio</option>
+                <option id="select5" value="I Allegro assai.mp3">Allegro assai</option>
+                <option id="select6" value="Sonate N11.mp3">Sonate N11</option>
+                <option id="select7" value="The Marriage Of Figaro - Overture.mp3">The Marriage Of Figaro - Overture</option>
+            </optgroup>
+            </select>
+                <button onclick="MozartAudioTest();" id="AudioButton">確定</button>
+                <div class="audio-container">
+                    <audio id="audioController" src=""  loop controls ></audio>
+                </div>
         <ol style="display:block;">
             <a href='#gameName'><div class="game"  onclick="clickGame(1);CardRestart();"><li id="game1">翻牌遊戲</li></div></a>
             <a href='#gameName'><div class="game"  onclick="clickGame(2);"><li id="game2">磚塊音樂家</li></div></a>
@@ -61,15 +78,15 @@
             </div>
             
             <div id="game2_play" style="display: none;">
+                <p style="margin-left:10px ;">請點擊人物頭像</p>
                 <div class="chooseMusician">
-                    <p>請點擊人物頭像</p>
                     <img src="./Images/Mozart.jpg" id="lamp1" onclick="getNum(1)">&nbsp;
                     <img src="./Images/Beethoven1.jpg" id="lamp2" onclick="getNum(2)">&nbsp;
                     <img src="./Images/Johann_Sebastian_Bach.jpg" id="lamp3" onclick="getNum(3)">&nbsp;
                     <img src="./Images/800px-Joseph_Haydn1.jpg" id="lamp4" onclick="getNum(4)">&nbsp;
                     <img src="./Images/Wolfgang-amadeus-mozart_2.jpg" id="lamp5" onclick="getNum(5)">&nbsp;
                 </div>
-                <canvas id="myCanvas" class="brickCanvas" width="1300" height="500" ></canvas>
+                <canvas id="myCanvas" class="brickCanvas" width="1300" height="475" ></canvas>
                 <div id="backMusician">
                     <button onclick="play();" class="BrickGamePlayPause">繼續</button>
                     <button onclick="pause();" class="BrickGamePlayPause">暫停</button>
@@ -118,7 +135,7 @@
     
                 <div id="game3_play" style="display: none;">
                     <button onclick="startWhack();" style="margin: 10px;font-size: 25px;">計時開始</button>
-                    <p class="score2" style="margin-left: 20px;">0</p>
+                    <p class="score2" style="margin-left: 20px;"></p>
                     <div class="game3Hole">
                         <div class="hole hole1">
                           <div class="mole"></div>
@@ -149,8 +166,14 @@
                           </div>
                           <script>
                             moles.forEach(function (mole) {
-                                mole.addEventListener('click', score());
+                                mole.addEventListener('click',scoreMole);
                             });
+                            function scoreMole(event) {
+                            if(!event.isTrusted) return;
+                            currentScore++;
+                            scoreBoard.innerHTML = "score:" + currentScore;
+                            this.parentNode.classList.remove('up'); 
+                            };
                           </script>
                       </div>
                       
