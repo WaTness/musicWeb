@@ -678,14 +678,14 @@ canvas{
   background-size:contain;
   content:'';
   width: 100%;
-  height:150px;
+  height:50px;
   position: absolute;
   z-index: 2;
   bottom:-30px;
 }
 
 .mole {
-  background:url('./Images/Mozart.jpg') bottom center no-repeat ;
+  background:url(./Images/Mozart.jpg) bottom center no-repeat ;
   background-size:60%;
   position: absolute;
   top: 100%;

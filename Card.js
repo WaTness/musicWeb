@@ -22,6 +22,10 @@ const cardsArray = [
     name:"MozartYoung",
     img:"./Images/Wolfgang-amadeus-mozart_2.jpg"
   },
+   {
+    name:"BeethovenYoung",
+    img:"./Images/BeethovenYoung.jpg"
+  },
 ]
 var score = 0;
 document.getElementById("score1").innerHTML="score:" + score;

@@ -20,6 +20,17 @@
             $("#B").fadeIn("slow");
         })
     </script>
+    <script>
+        function scoreMole(event) {
+            console.log(event);
+            if(!event.isTrusted) return;
+            currentScore++;
+            scoreBoard.innerHTML = "score:" + currentScore;
+        };
+    </script>
+    <script>document.addEventListener("DOMContentLoaded", function(){
+  // DOM Ready!
+});</script>
 </head>
 <body onload="clock()">
     <h1 class="title">銘傳音樂人</h1>
@@ -138,47 +149,35 @@
                     <p class="score2" style="margin-left: 20px;"></p>
                     <div class="game3Hole">
                         <div class="hole hole1">
-                          <div class="mole"></div>
+                          <div class="mole" onclick="scoreMole(event);"></div>
                         </div>
-                        <div class="hole hole2">
-                          <div class="mole"></div>
+                        <div class="hole hole2" >
+                          <div class="mole" onclick="scoreMole(event);"></div>
                         </div>
                         <div class="hole hole3">
-                          <div class="mole"></div>
+                          <div class="mole" onclick="scoreMole(event);"></div>
                         </div>
                         <div class="hole hole4">
-                          <div class="mole"></div>
+                          <div class="mole" onclick="scoreMole(event);"></div>
                         </div>
                         <div class="hole hole5">
-                          <div class="mole"></div>
+                          <div class="mole" onclick="scoreMole(event);"></div>
                         </div>
                         <div class="hole hole6">
-                          <div class="mole"></div>
+                          <div class="mole" onclick="scoreMole(event);"></div>
                         </div>
                         <div class="hole hole7">
-                            <div class="mole"></div>
+                            <div class="mole" onclick="scoreMole(event);"></div>
                           </div>
                           <div class="hole hole8">
-                            <div class="mole"></div>
+                            <div class="mole" onclick="scoreMole(event);"></div>
                           </div>
                           <div class="hole hole9">
-                            <div class="mole"></div>
+                            <div class="mole" onclick="scoreMole(event);"></div>
                           </div>
-                          <script>
-                            moles.forEach(function (mole) {
-                                mole.addEventListener('click',scoreMole);
-                            });
-                            function scoreMole(event) {
-                            if(!event.isTrusted) return;
-                            currentScore++;
-                            scoreBoard.innerHTML = "score:" + currentScore;
-                            this.parentNode.classList.remove('up'); 
-                            };
-                          </script>
                       </div>
-                      
                    
-                </div></div>
+                </div>
                 <div id="game4_play" style="display: none;">
                 </div></div>
                 <div id="game5_play" style="display: none;">
