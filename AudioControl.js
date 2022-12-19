@@ -1,7 +1,7 @@
 var musicSrc;
-function MozartAudioTest(){
-    var Mozart = "./Audios/Mozart/"
+function MozartAudioTest(name){
+    var musician = "./Audios/" + name + "/"
     musicSrc = document.getElementById("selectMusic").selectedIndex;
     musicSrc=document.getElementById("select" + (musicSrc)).value;
-    document.getElementById("audioController").src= Mozart + musicSrc;
+    document.getElementById("audioController").src= musician + musicSrc;
 }

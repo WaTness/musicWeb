@@ -445,19 +445,50 @@ div.musician:hover
 #BeethovenYoung:hover{
   font-weight: 400;
   color:#c97676;
-  animation: BeethovenYoungColor 2s infinite;
-  -webkit-animation: BeethovenYoungColor 2s infinite;
+  animation: MozartYoungColor 2s infinite;
+  -webkit-animation: MozartYoungColor 2s infinite;
 }
  
-@keyframes BeethovenYoungColor{
-0%{ color: #b9ef08;}
-16%{ color: #36ef08;}
-32%{ color: #5def08;}
-50%{color: #08ef55;}
-66%{ color: #5def08;}
-82%{ color: #36ef08;}
-100%{ color: #b9ef08;}
+#HaydnYoung{
+  background-image: url("./Images/HaydnYoung.jpg");
+  text-align:  center;
+  color: #b9ef08;
+  font-size: 30px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float: right;
+  width: 330px;
+  height: 413px;
+  border-radius: 30px;
 }
+
+#HaydnYoung:hover{
+  font-weight: 400;
+  color:#c97676;
+  animation: MozartYoungColor 2s infinite;
+  -webkit-animation: MozartYoungColor 2s infinite;
+}
+#BachYoung {
+  background-image: url("./Images/BachYoung.jpg");
+  text-align:  center;
+  color: #b9ef08;
+  font-size: 30px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float: right;
+  width: 330px;
+  height: 413px;
+  border-radius: 30px;
+}
+
+#BachYoung:hover{
+  font-weight: 400;
+  color:#c97676;
+  animation: MozartYoungColor 2s infinite;
+  -webkit-animation: MozartYoungColor 2s infinite;
+}
+
+
 
 .buttonShowHide{
   margin-top: 30px;
