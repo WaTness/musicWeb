@@ -297,16 +297,14 @@
             <h4>音樂</h4>
             <p>
                 <select id="selectMusic">
-                <option>選擇音樂</option>
-                <option id="select1" value="Mozart - Symphony No 40 (Molto Allegro).mp3">交響曲40號</option>
-                <option id="select2" value="Requiem KV 626 Lacrimosa.mp3">KV 626</option>
-                <option id="select3" value="Serenade 13 In G K 525 Eine Kleine Nachtmusik - 1 Allegro.mp3">K 525</option>
-                <option id="select4" value="Hélène Grimaud – Mozart Piano Concerto No 23 II Adagio.mp3">協奏曲23號II Adagio</option>
-                <option id="select5" value="I Allegro assai.mp3">Allegro assai</option>
-                <option id="select6" value="Sonate N11.mp3">Sonate N11</option>
-                <option id="select7" value="The Marriage Of Figaro - Overture.mp3">The Marriage Of Figaro - Overture</option>
+                <option disabled selected>選擇音樂</option>
+                <option id='select1' value='Symphony No 94 Surprise - Andante.mp3'>Symphony No 94 Surprise - Andante</option>
+                <option id='select2' value='Andante With Variations.mp3'>Andante With Variations</option>
+                <option id='select3' value='Symphony No 104 In D Major London  1 Adagio Allegro.mp3'>Symphony No 104 In D Major London  1 Adagio Allegro</option>
+                <option id='select4' value='Serenade Op 3 No5.mp3'>Serenade Op 3 No5</option>
+
                 </select>
-                <button onclick="MozartAudioTest();" id="AudioButton">確定</button>
+                <button onclick="MozartAudioTest('Haydn');" id="AudioButton">確定</button>
                 <div class="audio-container">
                     <audio id="audioController" src=""  loop controls ></audio>
                 </div>

@@ -7,6 +7,9 @@ Created on Tue Oct 25 08:06:05 2022
 
 from pytube import YouTube
 import os
+about = open("about.txt",'w')
+option = open("option.txt",'w')
+index = 1
 with open("Beethoven.txt",'r') as f:
     for url in f:
         target_path = "."
@@ -18,3 +21,9 @@ with open("Beethoven.txt",'r') as f:
         os.rename(out_file, new_file)
         print("target path = " + (new_file))
         print("mp3 has been successfully downloaded.")
+        base = base.split("\\")[-1]
+        about.write("<li><a href='" + url + "'>" + base + "</a></li>\n")
+        option.write("<option id='select" + str(index) + "' value='" + base + ".mp3'>" + base + "</option>\n")
+        index += 1
+about.close()
+option.close()

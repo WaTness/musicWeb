@@ -51,18 +51,41 @@
    
     <div class = "content" id="B" >
         <select id="selectMusic">
-            <option>選擇音樂</option>
-            <optgroup label="莫札特">
-                <option id="select1" value="Mozart - Symphony No 40 (Molto Allegro).mp3">交響曲40號</option>
-                <option id="select2" value="Requiem KV 626 Lacrimosa.mp3">KV 626</option>
-                <option id="select3" value="Serenade 13 In G K 525 Eine Kleine Nachtmusik - 1 Allegro.mp3">K 525</option>
-                <option id="select4" value="Hélène Grimaud – Mozart Piano Concerto No 23 II Adagio.mp3">協奏曲23號II Adagio</option>
-                <option id="select5" value="I Allegro assai.mp3">Allegro assai</option>
-                <option id="select6" value="Sonate N11.mp3">Sonate N11</option>
-                <option id="select7" value="The Marriage Of Figaro - Overture.mp3">The Marriage Of Figaro - Overture</option>
+            <option disabled selected>選擇音樂</option>
+            <optgroup label="莫札特" id="Mozart">
+                <option class = "M" id='select1' value='Mozart - Symphony No 40 (Molto Allegro).mp3'>Mozart - Symphony No 40 (Molto Allegro)</option>
+                <option class = "M" id='select2' value='Requiem KV 626 Lacrimosa.mp3'>Requiem KV 626 Lacrimosa</option>
+                <option class = "M" id='select3' value='The Marriage Of Figaro - Overture.mp3'>The Marriage Of Figaro - Overture</option>
+                <option class = "M" id='select4' value='I Allegro assai.mp3'>I Allegro assai</option>
+                <option class = "M" id='select5' value='Sonate N11.mp3'>Sonate N11</option>
+                <option class = "M" id='select6' value='Mozart Violin Concerto No 3 in G Major K  216   1st Movement   Allegro 莫札特小提琴協奏曲第三號.mp3'>Mozart Violin Concerto No 3 in G Major K  216   1st Movement   Allegro 莫札特小提琴協奏曲第三號</option>
+                <option class = "M" id='select7' value='K 219 Mozart Violin Concerto No 5 in A major III Rondo - Tempo di minuetto.mp3'>K 219 Mozart Violin Concerto No 5 in A major III Rondo - Tempo di minuetto</option>
+
+            </optgroup>
+            <optgroup label="貝多芬" id="Beethoven">
+                <option class = "Bee" id="select8" value="Beethoven Fur Elise.mp3">Beethoven Fur Elise</option>
+                <option class = "Bee" id="select9" value="Ludwig van Beethoven - Symphony No 7 In A Major - 2nd Movement - Allegretto.mp3">Ludwig van Beethoven - Symphony No 7 In A Major - 2nd Movement - Allegretto</option>
+                <option class = "Bee" id="select10" value="Moonlight Sonata.mp3">Moonlight Sonata</option>
+                <option class = "Bee" id="select11" value="Symphony No 5 In C minor (as heard in Austin Powers Goldmember).mp3">Symphony No 5 In C minor (as heard in Austin Powers Goldmember)</option>
+            </optgroup>
+            <optgroup label="巴赫" id="Bach">
+                <option class = "B" id='select12' value='Spirits of Meditation - Suite 5 Aria - Bach - HQ.mp3'>Spirits of Meditation - Suite 5 Aria - Bach - HQ</option>
+                <option class = "B" id='select13' value='JS Bach Suite No 3 in D Major BWV 1068 - II Air.mp3'>JS Bach Suite No 3 in D Major BWV 1068 - II Air</option>
+                <option class = "B" id='select14' value='Variatio 7 a 1 ovvero 2 Clav.mp3'>Variatio 7 a 1 ovvero 2 Clav</option>
+                <option class = "B" id='select15' value='Orchestral Suite No 2 for Flute String Orchestra and Harpsichord Continuo in B minor BWV.mp3'>Orchestral Suite No 2 for Flute String Orchestra and Harpsichord Continuo in B minor BWV</option>
+                <option class = "B" id='select16' value='Sinfonia from Christmas Oratorio.mp3'>Sinfonia from Christmas Oratorio</option>
+                <option class = "B" id='select17' value='JS Bach Savior of the Nations Come BWV 659 (Arr for 4 Cellos).mp3'>JS Bach Savior of the Nations Come BWV 659 (Arr for 4 Cellos)</option>
+                <option class = "B" id='select18' value='Concerto For Two Violins.mp3'>Concerto For Two Violins</option>
+                <option class = "B" id='select19' value='Brandenburg Concerto No 3 in G Major BWV 1048 I Allegro - Adagio (Remastered).mp3'>Brandenburg Concerto No 3 in G Major BWV 1048 I Allegro - Adagio (Remastered)</option>
+            </optgroup>
+            <optgroup label="海頓" id="Haydn">
+                <option class = "H" id='select20' value='Symphony No 94 Surprise - Andante.mp3'>Symphony No 94 Surprise - Andante</option>
+                <option class = "H" id='select21' value='Andante With Variations.mp3'>Andante With Variations</option>
+                <option class = "H" id='select22' value='Symphony No 104 In D Major London  1 Adagio Allegro.mp3'>Symphony No 104 In D Major London  1 Adagio Allegro</option>
+                <option class = "H" id='select23' value='Serenade Op 3 No5.mp3'>Serenade Op 3 No5</option>
             </optgroup>
             </select>
-                <button onclick="MozartAudioTest();" id="AudioButton">確定</button>
+                <button onclick="AudioAll();" id="AudioButton">確定</button>
                 <div class="audio-container">
                     <audio id="audioController" src=""  loop controls ></audio>
                 </div>

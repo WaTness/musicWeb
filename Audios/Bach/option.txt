@@ -1,0 +1,8 @@
+<option id='select1' value='Spirits of Meditation - Suite 5 Aria - Bach - HQ.mp3'>Spirits of Meditation - Suite 5 Aria - Bach - HQ</option>
+<option id='select2' value='JS Bach Suite No 3 in D Major BWV 1068 - II Air.mp3'>JS Bach Suite No 3 in D Major BWV 1068 - II Air</option>
+<option id='select3' value='Variatio 7 a 1 ovvero 2 Clav.mp3'>Variatio 7 a 1 ovvero 2 Clav</option>
+<option id='select4' value='Orchestral Suite No 2 for Flute String Orchestra and Harpsichord Continuo in B minor BWV.mp3'>Orchestral Suite No 2 for Flute String Orchestra and Harpsichord Continuo in B minor BWV</option>
+<option id='select5' value='Sinfonia from Christmas Oratorio.mp3'>Sinfonia from Christmas Oratorio</option>
+<option id='select6' value='JS Bach Savior of the Nations Come BWV 659 (Arr for 4 Cellos).mp3'>JS Bach Savior of the Nations Come BWV 659 (Arr for 4 Cellos)</option>
+<option id='select7' value='Concerto For Two Violins.mp3'>Concerto For Two Violins</option>
+<option id='select8' value='Brandenburg Concerto No 3 in G Major BWV 1048 I Allegro - Adagio (Remastered).mp3'>Brandenburg Concerto No 3 in G Major BWV 1048 I Allegro - Adagio (Remastered)</option>
